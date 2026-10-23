@@ -1,0 +1,54 @@
+{
+  "skip": "Aller au contenu",
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "journey": "Parcours",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "method": "Méthode",
+    "journal": "Journal",
+    "contact": "Contact",
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "primaryNavigation": "Navigation principale",
+    "legalNavigation": "Navigation légale"
+  },
+  "hero": {
+    "eyebrow": "Conception · Développement · Validation",
+    "title": "Développeur Full-Stack",
+    "lead": "Je transforme des besoins métier en interfaces lisibles et en services robustes, avec React, Java et PostgreSQL.",
+    "projects": "Explorer les projets",
+    "contact": "Parlons de votre projet",
+    "mada": "Découvrir Mada-BMP"
+  },
+  "home": {
+    "proofTitle": "Preuves sélectionnées",
+    "proofLead": "Deux angles complémentaires : cette vitrine conçue pour le recrutement et Mada-BMP, une réalisation full-stack distincte.",
+    "casesTitle": "Études de cas",
+    "casesLead": "Trois projets historiques documentés avec leurs limites, sans transformer un travail passé en démonstration fictive.",
+    "methodTitle": "Une méthode qui laisse des preuves",
+    "methodLead": "Comprendre, structurer, tester puis livrer : chaque étape produit une décision vérifiable.",
+    "journalTitle": "Journal technique",
+    "journalLead": "Retours d'expérience et décisions d'architecture, récemment publiés.",
+    "caseLink": "Lire l'étude de cas",
+    "madaLink": "Découvrir Mada-BMP"
+  },
+  "common": {
+    "backHome": "Retour à l'accueil",
+    "learnMore": "En savoir plus",
+    "unavailable": "Indisponible pour le moment",
+    "theme": "Changer de thème",
+    "language": "Changer de langue"
+  },
+  "footer": {
+    "statement": "Portfolio bilingue, accessible et indépendant de Mada-BMP.",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "lead": "Cette adresse ne correspond à aucune page publique du portfolio."
+  }
+}
+

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "verifiedFull360": false,
+  "loopMode": "pingpong",
+  "cycleSeconds": 17,
+  "transitionFraction": 0.4,
+  "scrollCycles": 0.12,
+  "frames": [
+    "/media/hero/turntable/frame_0000.webp",
+    "/media/hero/turntable/frame_0001.webp"
+  ]
+}

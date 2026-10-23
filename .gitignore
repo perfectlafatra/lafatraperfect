@@ -1,0 +1,47 @@
+# Local configuration and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+secrets/
+
+# IDE and operating system
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Java
+backend/target/
+*.log
+hs_err_pid*
+
+# Node
+**/node_modules/
+**/dist/
+**/coverage/
+*.tsbuildinfo
+
+# Database and QA evidence that may contain data
+*.dump
+*.backup
+qa/results/*
+!qa/results/README.md
+
+# P1 server/admin sources are preserved locally and archived outside the public
+# static portfolio. They must not enter the GitHub Pages delivery commit.
+/backend/
+/admin/
+/qa/
+/docker-compose.yml
+/docker-compose.prod.yml
+/render.yaml
+/frontend.rar
+**/*_backup.rar
+
+# Tool-local workspaces
+.superpowers/
+.worktrees/
+

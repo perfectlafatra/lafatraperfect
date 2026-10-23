@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# The canonical sitemap URL is added only after the real GitHub Pages origin is known.
+

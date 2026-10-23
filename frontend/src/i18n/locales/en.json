@@ -1,0 +1,54 @@
+{
+  "skip": "Skip to content",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "journey": "Journey",
+    "skills": "Skills",
+    "projects": "Projects",
+    "method": "Method",
+    "journal": "Journal",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "primaryNavigation": "Primary navigation",
+    "legalNavigation": "Legal navigation"
+  },
+  "hero": {
+    "eyebrow": "Design · Development · Validation",
+    "title": "Full-Stack Developer",
+    "lead": "I turn business needs into readable interfaces and robust services with React, Java and PostgreSQL.",
+    "projects": "Explore projects",
+    "contact": "Let's talk about your project",
+    "mada": "Discover Mada-BMP"
+  },
+  "home": {
+    "proofTitle": "Selected evidence",
+    "proofLead": "Two complementary views: this recruitment-focused showcase and Mada-BMP, a separate full-stack product.",
+    "casesTitle": "Case studies",
+    "casesLead": "Three historical projects documented with their limits, without presenting past work as a fictional live demo.",
+    "methodTitle": "A method that leaves evidence",
+    "methodLead": "Understand, structure, test and deliver: every step produces a verifiable decision.",
+    "journalTitle": "Technical journal",
+    "journalLead": "Experience reports and architecture decisions, recently published.",
+    "caseLink": "Read the case study",
+    "madaLink": "Discover Mada-BMP"
+  },
+  "common": {
+    "backHome": "Back to home",
+    "learnMore": "Learn more",
+    "unavailable": "Currently unavailable",
+    "theme": "Change theme",
+    "language": "Change language"
+  },
+  "footer": {
+    "statement": "A bilingual, accessible portfolio independent from Mada-BMP.",
+    "legal": "Legal notice",
+    "privacy": "Privacy"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "This address does not match any public portfolio page."
+  }
+}
+

@@ -1,0 +1,45 @@
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
+import '../i18n/config';
+import { ThemeProvider } from '../contexts/ThemeContext';
+import { AppRouter } from '../routes/AppRouter';
+
+function renderPath(path: string) {
+  return render(
+    <ThemeProvider>
+      <MemoryRouter initialEntries={[path]}>
+        <AppRouter />
+      </MemoryRouter>
+    </ThemeProvider>
+  );
+}
+
+describe('public application', () => {
+  it('renders a complete French recruiter journey without an API', () => {
+    renderPath('/fr');
+
+    expect(screen.getByRole('heading', { level: 1, name: /développeur full-stack/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /preuves sélectionnées/i })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /lire l'étude de cas/i })).toHaveLength(3);
+    expect(screen.getAllByRole('link', { name: /découvrir mada-bmp/i })).toHaveLength(2);
+  });
+
+  it('renders the English home with an English document language', () => {
+    renderPath('/en');
+
+    expect(screen.getByRole('heading', { level: 1, name: /full-stack developer/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /skip to content/i })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: /primary navigation/i })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: /legal navigation/i })).toBeInTheDocument();
+    expect(document.documentElement.lang).toBe('en');
+  });
+
+  it('renders a localized not-found state', () => {
+    renderPath('/fr/inconnue');
+
+    expect(screen.getByRole('heading', { name: /page introuvable/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /retour à l'accueil/i })).toHaveAttribute('href', '/fr');
+  });
+});
+

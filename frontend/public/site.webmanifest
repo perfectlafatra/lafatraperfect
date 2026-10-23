@@ -1,0 +1,10 @@
+{
+  "name": "LAFATRAPERFECT — Full-Stack Developer",
+  "short_name": "LAFATRAPERFECT",
+  "start_url": "./fr",
+  "display": "standalone",
+  "background_color": "#f4f1ea",
+  "theme_color": "#3159d9",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
+
