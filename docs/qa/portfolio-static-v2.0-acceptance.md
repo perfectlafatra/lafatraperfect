@@ -41,10 +41,10 @@ Décision : `PASS` — contenu éditorial complété, vérification locale et pu
 | commit public | `PASS` | mise à jour éditoriale poussée sur `master` après recette locale |
 | push normal | `PASS` | push normal vers `perfectlafatra/lafatraperfect` |
 | Source Pages | `CONFIGURED` | GitHub UI confirme `Source: GitHub Actions` le 2026-10-24 |
-| Actions GitHub | `PASS` | run `40084974360` : build, upload artifact et deploy terminés avec succès |
+| Actions GitHub | `PASS` | run `40092228767` : build, upload artifact et deploy terminés avec succès |
 | URL `.github.io` | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/fr` HTTP 200 vérifié le 2026-10-24 |
 
-Routes publiques vérifiées : `/fr`, `/en`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `robots.txt` et `sitemap.xml` répondent HTTP 200. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
+Routes publiques vérifiées : `/fr`, `/en`, `/fr/journal`, `/fr/journal/api-rest-spring-boot`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `/fr/contact`, le CV PDF, `robots.txt` et `sitemap.xml` répondent HTTP 200. Le bundle publié ne contient plus les anciens avertissements de journal. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
 
 ## Limites connues
 
