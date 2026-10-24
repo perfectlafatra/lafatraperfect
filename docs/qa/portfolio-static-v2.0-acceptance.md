@@ -41,10 +41,10 @@ Décision : `PARTIAL` — succès local atteint, publication externe non exécut
 | commit public | `PASS` | `50b2f93` puis correctif workflow `cc77f69` |
 | push normal | `PASS` | push normal vers `perfectlafatra/lafatraperfect` |
 | Source Pages | `CONFIGURED` | GitHub UI confirme `Source: GitHub Actions` le 2026-10-24 |
-| Actions GitHub | `PARTIAL` | build et tests PASS ; activation initiale échouait avant configuration Pages, relance à déclencher |
-| URL `.github.io` | `NOT_RUN` | à vérifier après la prochaine exécution réussie |
+| Actions GitHub | `PASS` | run `40084974360` : build, upload artifact et deploy terminés avec succès |
+| URL `.github.io` | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/fr` HTTP 200 vérifié le 2026-10-24 |
 
-Étape suivante : relancer `Deploy static portfolio to GitHub Pages` maintenant que la source Pages est configurée. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
+Routes publiques vérifiées : `/fr`, `/en`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `robots.txt` et `sitemap.xml` répondent HTTP 200. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
 
 ## Limites connues
 
