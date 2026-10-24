@@ -25,10 +25,10 @@ npm run verify
 
 ## Édition et publication
 
-- Les contenus éditoriaux sont dans `frontend/src/content/`.
-- Les coordonnées restent absentes tant qu’une adresse professionnelle vérifiée et un CV publiable ne sont pas ajoutés dans `frontend/src/config/site.ts`.
+- Les contenus éditoriaux sont dans `frontend/src/content/` et sont publiés comme notes techniques versionnées FR/EN.
+- Le contact direct et le CV sont configurés dans `frontend/src/config/site.ts` ; le CV public est `frontend/public/cv/lafatraramanantena-cv.pdf`.
 - Le workflow `.github/workflows/deploy.yml` construit uniquement `frontend/dist` et déploie GitHub Pages. Il calcule `VITE_BASE_PATH` à partir du dépôt réel ; aucun nom de compte n’est supposé.
-- Le dépôt n’a pas encore de remote GitHub identifié dans l’environnement audité : la publication est donc `NOT_RUN` jusqu’à ajout/validation de ce remote et des droits Pages.
+- Le remote public est `https://github.com/perfectlafatra/lafatraperfect.git` et la vitrine est publiée via GitHub Actions à `https://perfectlafatra.github.io/lafatraperfect/fr`.
 
 ## Archive P1
 

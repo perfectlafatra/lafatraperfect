@@ -3,7 +3,7 @@
  *
  * Cette configuration est la source unique de vérité côté Frontend.
  * Elle sera remplacée plus tard par les données publiées depuis le
- * backoffice (« Identité visuelle / Médias du Hero »), sans toucher
+ * aux sources privées (« Identité visuelle / Médias du Hero »), sans toucher
  * au code des composants.
  */
 import type { Locale } from '../routes/publicRoutes';

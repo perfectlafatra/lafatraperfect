@@ -28,11 +28,6 @@ export function JournalPostPage({ locale }: { locale: Locale }) {
       <div className="prose-card">
         {text.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
       </div>
-      <p className="journal-demo-note">
-        {locale === 'fr'
-          ? 'Contenu de démonstration — identifié pour être remplacé par un article réel depuis le backoffice.'
-          : 'Demo content — marked for replacement with a real post from the back office.'}
-      </p>
       <p><Link className="text-link" to={routePath('journal', locale)}>← {t('nav.journal')}</Link></p>
     </article>
   );

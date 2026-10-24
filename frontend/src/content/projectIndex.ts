@@ -45,8 +45,8 @@ export const projects: ProjectSummary[] = [
     title: { fr: 'lalana', en: 'lalana' },
     kind: { fr: 'Étude de cas historique', en: 'Historical case study' },
     summary: {
-      fr: 'Projet web Spring Boot et Thymeleaf présenté comme étude de cas à compléter par des preuves autorisées.',
-      en: 'A Spring Boot and Thymeleaf web project presented as a case study awaiting authorised evidence.'
+      fr: 'Projet web Spring Boot et Thymeleaf documenté comme expérience historique de rendu serveur et de flux contrôleur/vue.',
+      en: 'Spring Boot and Thymeleaf project documented as a historical experience in server rendering and controller/view flows.'
     },
     technologies: ['Spring Boot', 'Thymeleaf'],
     proofStatus: 'in-progress',

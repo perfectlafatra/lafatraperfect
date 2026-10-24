@@ -50,11 +50,6 @@ export function JournalPage({ locale }: { locale: Locale }) {
       <div className="journal-grid">
         {posts.map((post) => <JournalCard key={post.slug} post={post} locale={locale} />)}
       </div>
-      <p className="journal-demo-note">
-        {locale === 'fr'
-          ? 'Les articles actuels sont des contenus de démonstration. Leur administration depuis le backoffice nécessite une intégration effective.'
-          : 'Current posts are demonstration content. Editing them from the back office requires a working integration.'}
-      </p>
     </article>
   );
 }

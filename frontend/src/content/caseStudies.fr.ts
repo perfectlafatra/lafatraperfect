@@ -19,13 +19,13 @@ export const caseStudiesFr: Record<string, StarCaseStudy> = {
     situation:
       'Un besoin interne de prototypage rapide : manipuler des listes et préférences côté navigateur, sans backend disponible au départ.',
     tasks:
-      'Construire une application React locale qui persiste l’état entre les sessions, documenter les choix et poser un périmètre de démonstration réaliste.',
+      'Construire une application React locale qui persiste l’état entre les sessions et documenter les choix de conception.',
     actions:
       'Découpage en composants lisibles, sérialisation contrôlée via localStorage, gestion des cas de JSON invalide ou absent, relecture croisée du code.',
     results:
-      'Une application locale fonctionnelle et un dossier documentaire expliquant ce qui est démontré — et ce qui ne l’est pas.',
+      'Une application locale fonctionnelle et un dossier documentaire qui relie les décisions d’interface aux comportements observés.',
     limits:
-      'Aucune démonstration publique ni capture vérifiée n’est revendiquée. Le périmètre reste volontairement local.',
+      'Le statut reste DOCUMENTED : la preuve disponible est le code et sa documentation, sans URL publique annoncée.',
     lessons:
       'La persistance navigateur est puissante mais silencieuse : les erreurs de quota ou de format doivent être traitées explicitement, jamais supposées impossibles.'
   },
@@ -37,9 +37,9 @@ export const caseStudiesFr: Record<string, StarCaseStudy> = {
     actions:
       'Relecture du code existant, schématisation des requêtes page/contrôleur/vue, identification des points à confirmer par des preuves autorisées.',
     results:
-      'Une étude de cas honnête qui distingue ce qui est établi de ce qui reste à confirmer.',
+      'Une étude de cas structurée qui distingue le fonctionnement observé, le rôle tenu et les éléments non publiables.',
     limits:
-      'Les dates exactes, captures et URL publiques restent à confirmer avant toute mise en avant commerciale.',
+      'Aucune URL publique ni capture client n’est publiée ; le statut DOCUMENTED reflète une expérience historique décrite par le code et les notes disponibles.',
     lessons:
       'Documenter après coup impose une discipline de traçabilité : chaque affirmation technique doit pouvoir être rattachée à un élément vérifiable.'
   },

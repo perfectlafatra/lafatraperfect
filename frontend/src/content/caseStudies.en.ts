@@ -9,13 +9,13 @@ export const caseStudiesEn: Record<string, StarCaseStudy> = {
     situation:
       'An internal need for fast prototyping: handling lists and preferences in the browser, with no backend available at first.',
     tasks:
-      'Build a local React application that persists state between sessions, document the choices and set a realistic demonstration scope.',
+      'Build a local React application that persists state between sessions and document the design choices.',
     actions:
       'Readable component decomposition, controlled localStorage serialisation, handling invalid or missing JSON, cross code review.',
     results:
-      'A working local application and documentation explaining what is demonstrated — and what is not.',
+      'A working local application and documentation connecting interface decisions to observed behaviour.',
     limits:
-      'No public demo or verified screenshot is claimed. The scope is intentionally local.',
+      'The status remains DOCUMENTED: the available evidence is code and documentation, with no public URL claimed.',
     lessons:
       'Browser persistence is powerful but silent: quota or format errors must be handled explicitly, never assumed impossible.'
   },
@@ -27,9 +27,9 @@ export const caseStudiesEn: Record<string, StarCaseStudy> = {
     actions:
       'Review of the existing code, page/controller/view request mapping, identification of points to be confirmed by authorised evidence.',
     results:
-      'An honest case study distinguishing what is established from what still needs confirmation.',
+      'A structured case study distinguishing observed behaviour, actual contribution and non-publishable elements.',
     limits:
-      'Exact dates, screenshots and public URLs still need confirmation before any commercial highlighting.',
+      'No public URL or client screenshot is published; DOCUMENTED reflects a historical experience described by available code and notes.',
     lessons:
       'Retrospective documentation demands traceability discipline: every technical claim must be traceable to a verifiable element.'
   },

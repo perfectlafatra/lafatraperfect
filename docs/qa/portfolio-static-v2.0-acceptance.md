@@ -1,15 +1,15 @@
 # Recette d’acceptation — Portfolio statique V2.0
 
-Date : 2026-10-23  
+Date : 2026-10-24
 Périmètre : `C:\Portfolio\lafatraperfect`  
-Décision : `PARTIAL` — succès local atteint, publication externe non exécutée.
+Décision : `PASS` — contenu éditorial complété, vérification locale et publication Pages opérationnelles.
 
 ## Résultats locaux
 
 | contrôle | statut | preuve |
 |---|---|---|
 | TypeScript strict et build Vite | `PASS` | `cd frontend; npm run build` |
-| Tests frontend | `PASS` | 10 fichiers, 24 tests Vitest |
+| Tests frontend | `PASS` | 11 fichiers, 26 tests Vitest |
 | Lint | `PASS` | `npm run lint` |
 | Contrat statique sans API/Axios | `PASS` | `src/test/static-contract.test.ts`, API proxy absent |
 | FR/EN et parité des clés | `PASS` | `i18n-parity.test.ts`, contrat public |
@@ -31,14 +31,14 @@ Décision : `PARTIAL` — succès local atteint, publication externe non exécut
 - Mada-BMP reste une étude de cas distincte et ne reçoit pas de statut production ou live sans preuve publique.
 - ZINA est présenté sous confidentialité, avec une seule illustration conceptuelle et aucun identifiant, email, téléphone, commande ou écran interne repris des documents source.
 - Natur’Ally/Java Swing et les éléments Java EE ne sont pas dans l’index public des projets.
-- Le contact reste un état honnête tant qu’aucune adresse professionnelle vérifiée et aucun CV publiable ne sont configurés.
+- Contact et CV : `PASS` — email `mailto:` configuré et CV local publié sous `frontend/public/cv/`.
 
 ## Publication externe
 
 | élément | statut | raison |
 |---|---|---|
 | remote Git | `PASS` | `origin=https://github.com/perfectlafatra/lafatraperfect.git`, branche `master` |
-| commit public | `PASS` | `50b2f93` puis correctif workflow `cc77f69` |
+| commit public | `PASS` | mise à jour éditoriale poussée sur `master` après recette locale |
 | push normal | `PASS` | push normal vers `perfectlafatra/lafatraperfect` |
 | Source Pages | `CONFIGURED` | GitHub UI confirme `Source: GitHub Actions` le 2026-10-24 |
 | Actions GitHub | `PASS` | run `40084974360` : build, upload artifact et deploy terminés avec succès |

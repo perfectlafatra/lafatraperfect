@@ -95,7 +95,6 @@
 .journal-card p { color: var(--color-muted); }
 .journal-card__meta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: auto; border-top: 1px solid var(--color-border); padding-top: .9rem; font-size: .85rem; }
 .journal-post__meta { display: flex; align-items: center; gap: 1.25rem; margin-top: 1.75rem; color: var(--color-muted); font-size: .9rem; flex-wrap: wrap; }
-.journal-demo-note { margin-top: 2.5rem; padding: .9rem 1.1rem; border: 1px dashed var(--color-border); border-radius: var(--radius-control); color: var(--color-muted); font-size: .87rem; }
 .case-study__meta { display: flex; align-items: center; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap; }
 .not-found__code { color: var(--color-primary); font-size: clamp(5rem, 20vw, 13rem); font-weight: 950; line-height: .8; opacity: .18; }
 .fatal-state { min-height: 100vh; padding: 3rem; display: grid; place-content: center; text-align: center; }
