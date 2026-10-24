@@ -37,13 +37,14 @@ Décision : `PARTIAL` — succès local atteint, publication externe non exécut
 
 | élément | statut | raison |
 |---|---|---|
-| remote Git | `BLOCKED` | `git remote -v` ne retourne aucune URL |
-| commit public | `NOT_RUN` | aucun dépôt distant confirmé |
-| push normal | `NOT_RUN` | identité/branche/permissions GitHub inconnues |
-| Actions GitHub | `NOT_RUN` | workflow prêt mais non déclenché |
-| URL `.github.io` | `NOT_RUN` | aucune URL réelle à vérifier |
+| remote Git | `PASS` | `origin=https://github.com/perfectlafatra/lafatraperfect.git`, branche `master` |
+| commit public | `PASS` | `50b2f93` puis correctif workflow `cc77f69` |
+| push normal | `PASS` | push normal vers `perfectlafatra/lafatraperfect` |
+| Source Pages | `CONFIGURED` | GitHub UI confirme `Source: GitHub Actions` le 2026-10-24 |
+| Actions GitHub | `PARTIAL` | build et tests PASS ; activation initiale échouait avant configuration Pages, relance à déclencher |
+| URL `.github.io` | `NOT_RUN` | à vérifier après la prochaine exécution réussie |
 
-Étape suivante sûre : ajouter le remote du dépôt Portfolio réel, vérifier son propriétaire et sa branche par défaut, puis lancer une revue des fichiers staged avant un commit P0. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
+Étape suivante : relancer `Deploy static portfolio to GitHub Pages` maintenant que la source Pages est configurée. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
 
 ## Limites connues
 
