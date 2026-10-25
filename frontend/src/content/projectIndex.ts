@@ -20,11 +20,11 @@ export interface ProjectSummary {
   cover: CoverAsset;
 }
 
-export const projects: ProjectSummary[] = [
+const projectEntries: ProjectSummary[] = [
   {
     slug: 'react-localstorage',
     title: { fr: 'React localStorage', en: 'React localStorage' },
-    kind: { fr: 'Étude de cas historique', en: 'Historical case study' },
+    kind: { fr: 'Projet Frontend', en: 'Frontend project' },
     summary: {
       fr: 'Application React locale documentée autour de la persistance navigateur.',
       en: 'A documented local React application centred on browser persistence.'
@@ -43,7 +43,7 @@ export const projects: ProjectSummary[] = [
   {
     slug: 'lalana',
     title: { fr: 'lalana', en: 'lalana' },
-    kind: { fr: 'Étude de cas historique', en: 'Historical case study' },
+    kind: { fr: 'Projet Web Java', en: 'Java web project' },
     summary: {
       fr: 'Projet web Spring Boot et Thymeleaf documenté comme expérience historique de rendu serveur et de flux contrôleur/vue.',
       en: 'Spring Boot and Thymeleaf project documented as a historical experience in server rendering and controller/view flows.'
@@ -62,7 +62,7 @@ export const projects: ProjectSummary[] = [
   {
     slug: 'zina-tsara-volo',
     title: { fr: 'Zina by Tsara Volo', en: 'Zina by Tsara Volo' },
-    kind: { fr: 'Étude de cas historique', en: 'Historical case study' },
+    kind: { fr: 'Stage · projet Full-Stack', en: 'Internship · Full-Stack project' },
     summary: {
       fr: 'Stage du 16 juin au 16 septembre 2025 : plateforme web ZINA documentée côté React/JavaScript et Spring Boot/PostgreSQL, sans donnée client publiée.',
       en: 'Internship from 16 June to 16 September 2025: ZINA web platform documented with React/JavaScript and Spring Boot/PostgreSQL, with no client data published.'
@@ -81,7 +81,7 @@ export const projects: ProjectSummary[] = [
   {
     slug: 'mada-bmp',
     title: { fr: 'Mada-BMP', en: 'Mada-BMP' },
-    kind: { fr: 'Réalisation distincte', en: 'Separate product' },
+    kind: { fr: 'Projet Full-Stack', en: 'Full-Stack project' },
     summary: {
       fr: 'Plateforme de gestion pour indépendants et petites structures, indépendante de ce portfolio.',
       en: 'A management platform for independent professionals and small organisations, separate from this portfolio.'
@@ -98,6 +98,12 @@ export const projects: ProjectSummary[] = [
     }
   }
 ];
+
+const projectPriority: ProjectSlug[] = ['mada-bmp', 'zina-tsara-volo', 'react-localstorage', 'lalana'];
+
+export const projects = [...projectEntries].sort(
+  (left, right) => projectPriority.indexOf(left.slug) - projectPriority.indexOf(right.slug),
+);
 
 export function findProject(slug: string): ProjectSummary | undefined {
   return projects.find((project) => project.slug === slug);

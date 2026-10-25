@@ -7,9 +7,9 @@ describe('localized routes', () => {
     expect(localizePath('/en/projects/zina-tsara-volo', 'fr')).toBe('/fr/projets/zina-tsara-volo');
   });
 
-  it('preserves a nested journal post when switching locale', () => {
-    expect(localizePath('/fr/journal/api-rest-spring-boot', 'en')).toBe('/en/journal/api-rest-spring-boot');
-    expect(localizePath('/en/journal/postgresql-integrite-migrations', 'fr')).toBe('/fr/journal/postgresql-integrite-migrations');
+  it('preserves a nested project when switching locale', () => {
+    expect(localizePath('/fr/projets/mada-bmp', 'en')).toBe('/en/projects/mada-bmp');
+    expect(localizePath('/en/projects/zina-tsara-volo', 'fr')).toBe('/fr/projets/zina-tsara-volo');
   });
 
   it('falls back to the localized home for an unknown path', () => {

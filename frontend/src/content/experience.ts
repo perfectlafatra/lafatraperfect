@@ -1,30 +1,29 @@
 export const experience = [
   {
-    key: 'foundation',
-    title: { fr: 'Fondations web', en: 'Web foundations' },
+    key: 'frontend',
+    title: { fr: 'Développement web React', en: 'React web development' },
     description: {
-      fr: 'React, TypeScript et JavaScript pratiqués depuis 2024 pour construire des interfaces responsive et accessibles.',
-      en: 'React, TypeScript and JavaScript practiced since 2024 to build responsive, accessible interfaces.'
+      fr: 'Conception d’interfaces avec React, TypeScript et JavaScript : composants réutilisables, responsive design, accessibilité et intégration de données.',
+      en: 'Interface development with React, TypeScript and JavaScript: reusable components, responsive design, accessibility and data integration.'
     },
-    date: { fr: '2024 → aujourd’hui', en: '2024 → present' }
+    date: { fr: 'Depuis 2024', en: 'Since 2024' }
   },
   {
-    key: 'fullstack',
-    title: { fr: 'Construction full-stack', en: 'Full-stack development' },
+    key: 'zina-internship',
+    title: { fr: 'Stage développeur web — ZINA by Tsara Volo', en: 'Web Developer Internship — ZINA by Tsara Volo' },
     description: {
-      fr: 'Java/Spring Boot, API REST et PostgreSQL sur les projets web concrets ; MySQL manipulé pendant un an à partir de 2024.',
-      en: 'Java/Spring Boot, REST APIs and PostgreSQL on concrete web projects; MySQL used for one year from 2024.'
+      fr: 'Contribution à une plateforme React et Spring Boot : espace client, CRM, boutique, diagnostic capillaire, rendez-vous et notifications, avec PostgreSQL.',
+      en: 'Contributed to a React and Spring Boot platform: customer area, CRM, shop, hair diagnosis, appointments and notifications, backed by PostgreSQL.'
     },
-    date: { fr: '2025 → aujourd’hui', en: '2025 → present' }
+    date: { fr: '16 juin → 16 septembre 2025', en: '16 June → 16 September 2025' }
   },
   {
-    key: 'delivery',
-    title: { fr: 'Qualité et livraison', en: 'Quality and delivery' },
+    key: 'mada-bmp',
+    title: { fr: 'Mada-BMP — projet Full-Stack', en: 'Mada-BMP — Full-Stack project' },
     description: {
-      fr: 'Docker, documentation, QA et exploitation reproductible.',
-      en: 'Docker, documentation, QA and reproducible operations.'
+      fr: 'Conception d’une plateforme de gestion pour indépendants et petites structures avec React, Spring Boot, PostgreSQL, tests et documentation technique.',
+      en: 'Designing a management platform for independent professionals and small organisations with React, Spring Boot, PostgreSQL, tests and technical documentation.'
     },
-    date: { fr: '2025 → aujourd’hui', en: '2025 → present' }
+    date: { fr: '2026 → aujourd’hui', en: '2026 → present' }
   }
 ] as const;
-

@@ -4,10 +4,10 @@ import { Badge } from '../ui/Badge';
 
 export function ProofStatus({ status, locale }: { status: EvidenceStatus; locale: Locale }) {
   const labels: Record<EvidenceStatus, { fr: string; en: string }> = {
-    documented: { fr: 'Étude documentée', en: 'Documented study' },
-    'demo-simulated': { fr: 'Démo simulée', en: 'Simulated demo' },
-    'live-verified': { fr: 'Lien vérifié', en: 'Verified live link' },
-    'in-progress': { fr: 'En consolidation', en: 'In progress' }
+    documented: { fr: 'Projet documenté', en: 'Documented project' },
+    'demo-simulated': { fr: 'Prototype', en: 'Prototype' },
+    'live-verified': { fr: 'En ligne', en: 'Live' },
+    'in-progress': { fr: 'En développement', en: 'In development' }
   };
   const label = labels[status][locale];
   return <Badge>{label}</Badge>;

@@ -18,7 +18,6 @@ export function MadaBMPPage({ locale }: { locale: Locale }) {
     <article className="page-shell case-study">
       <MetaTags title={project.title[locale]} description={project.summary[locale]} locale={locale} />
       <img className="case-study__cover" src={project.cover.src} alt={project.cover.alt[locale]} width="1200" height="675" />
-      <p className="project-card__media-note">{locale === 'fr' ? 'Illustration conceptuelle — pas une capture live.' : 'Conceptual illustration — not a live capture.'}</p>
       <p className="eyebrow">CASE STUDY</p>
       <h1>{project.title[locale]}</h1>
       <p className="page-lead">{project.summary[locale]}</p>

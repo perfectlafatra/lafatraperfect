@@ -11,7 +11,6 @@ export function ProjectCard({ project, locale, compact = false }: { project: Pro
   return (
     <Card className={compact ? 'project-card project-card--compact' : 'project-card'}>
       <img className="project-card__cover" src={project.cover.src} alt={project.cover.alt[locale]} width="1200" height="675" loading="lazy" />
-      <p className="project-card__media-note">{locale === 'fr' ? 'Illustration conceptuelle — pas une capture live.' : 'Conceptual illustration — not a live capture.'}</p>
       <div>
         <p className="eyebrow">{project.kind[locale]}</p>
         <h3>{project.title[locale]}</h3>

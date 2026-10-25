@@ -1,12 +1,12 @@
 @keyframes skeleton { to { background-position: -200% 0; } }
 @keyframes heroPortraitIn { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
 
-.button, .project-card, .journal-card, .icon-button, .primary-nav a { transition: transform var(--duration-standard) var(--ease-out), color var(--duration-fast) ease, background-color var(--duration-fast) ease, border-color var(--duration-fast) ease, box-shadow var(--duration-standard) var(--ease-out); }
-.button:hover:not(:disabled), .project-card:hover, .journal-card:hover { transform: translateY(-3px); }
+.button, .project-card, .icon-button, .primary-nav a { transition: transform var(--duration-standard) var(--ease-out), color var(--duration-fast) ease, background-color var(--duration-fast) ease, border-color var(--duration-fast) ease, box-shadow var(--duration-standard) var(--ease-out); }
+.button:hover:not(:disabled), .project-card:hover { transform: translateY(-3px); }
 .button:active:not(:disabled), .icon-button:active { transform: translateY(0); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .button:hover:not(:disabled), .project-card:hover, .journal-card:hover { transform: none !important; }
+  .button:hover:not(:disabled), .project-card:hover { transform: none !important; }
 }

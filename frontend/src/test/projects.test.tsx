@@ -4,10 +4,10 @@ import { projects } from '../content/projectIndex';
 describe('public project catalogue', () => {
   it('contains only the three documented historical cases and Mada-BMP', () => {
     expect(projects.map((project) => project.slug)).toEqual([
-      'react-localstorage',
-      'lalana',
+      'mada-bmp',
       'zina-tsara-volo',
-      'mada-bmp'
+      'react-localstorage',
+      'lalana'
     ]);
     expect(projects.some((project) => /natur|certification/i.test(project.title.fr))).toBe(false);
   });

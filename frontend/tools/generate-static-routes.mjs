@@ -12,20 +12,10 @@ const base = baseMatch?.[1] ?? '/';
 export const routes = [
   'fr', 'en',
   'fr/a-propos', 'en/about', 'fr/parcours', 'en/journey', 'fr/competences', 'en/skills',
-  'fr/projets', 'en/projects', 'fr/methode', 'en/method', 'fr/journal', 'en/journal',
+  'fr/projets', 'en/projects',
   'fr/contact', 'en/contact', 'fr/mentions-legales', 'en/legal', 'fr/confidentialite', 'en/privacy',
   'fr/projets/react-localstorage', 'fr/projets/lalana', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
-  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp',
-  'fr/journal/architecture-fullstack-maintenable', 'en/journal/architecture-fullstack-maintenable',
-  'fr/journal/api-rest-spring-boot', 'en/journal/api-rest-spring-boot',
-  'fr/journal/postgresql-integrite-migrations', 'en/journal/postgresql-integrite-migrations',
-  'fr/journal/interface-react-responsive', 'en/journal/interface-react-responsive',
-  'fr/journal/securiser-authentification', 'en/journal/securiser-authentification',
-  'fr/journal/documenter-projet-star', 'en/journal/documenter-projet-star',
-  'fr/journal/tester-fiabiliser-fullstack', 'en/journal/tester-fiabiliser-fullstack',
-  'fr/journal/preparer-deploiement', 'en/journal/preparer-deploiement',
-  'fr/journal/experience-bilingue-fr-en', 'en/journal/experience-bilingue-fr-en',
-  'fr/journal/resoudre-anomalie-technique', 'en/journal/resoudre-anomalie-technique'
+  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
 ];
 
 const projectTitles = {
@@ -46,8 +36,8 @@ function metadataFor(route) {
     ? projectTitles[projectSlug]?.[english ? 1 : 0] ?? 'LAFATRAPERFECT — Portfolio'
     : english ? 'LAFATRAPERFECT — Full-Stack Web Developer' : 'LAFATRAPERFECT — Développeur Web Full-Stack';
   const description = english
-    ? 'Evidence-led portfolio of a React and Spring Boot Full-Stack Web Developer.'
-    : 'Portfolio fondé sur des preuves d’un développeur Web Full-Stack React et Spring Boot.';
+    ? 'Professional portfolio of a React and Spring Boot Full-Stack Web Developer.'
+    : 'Portfolio professionnel d’un développeur Web Full-Stack React et Spring Boot.';
   const canonical = `${base}${route}`;
   let html = template.replace(/<html lang="[^"]*">/, `<html lang="${english ? 'en' : 'fr'}">`);
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);

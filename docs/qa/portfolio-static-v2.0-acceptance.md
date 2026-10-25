@@ -1,21 +1,21 @@
 # Recette d’acceptation — Portfolio statique V2.0
 
-Date : 2026-10-24
+Date : 2026-10-25
 Périmètre : `C:\Portfolio\lafatraperfect`  
-Décision : `PASS` — contenu éditorial complété, vérification locale et publication Pages opérationnelles.
+Décision : `PASS` — portfolio recentré sur le profil candidat, les projets, le parcours, le CV et le contact.
 
 ## Résultats locaux
 
 | contrôle | statut | preuve |
 |---|---|---|
 | TypeScript strict et build Vite | `PASS` | `cd frontend; npm run build` |
-| Tests frontend | `PASS` | 11 fichiers, 26 tests Vitest |
+| Tests frontend | `PASS` | 12 fichiers, 29 tests Vitest |
 | Lint | `PASS` | `npm run lint` |
 | Contrat statique sans API/Axios | `PASS` | `src/test/static-contract.test.ts`, API proxy absent |
 | FR/EN et parité des clés | `PASS` | `i18n-parity.test.ts`, contrat public |
 | Couvertures projet | `PASS` | 4 projets, une couverture, alt et provenance par projet |
 | ZINA | `PASS` | une illustration conceptuelle, aucune galerie ni capture privée |
-| Routes profondes | `PASS` | 48 documents `dist/**/index.html` + `404.html` |
+| Routes profondes | `PASS` | 24 documents `dist/**/index.html` + `404.html` ; Journal/Méthode retirés du périmètre public |
 | Base projet GitHub Pages | `PASS` | build vérifié avec `VITE_BASE_PATH=/lafatraperfect/` |
 | Router et médias sous base projet | `PASS` | `BrowserRouter.basename`, portraits, manifest et assets utilisent `BASE_URL` |
 | Métadonnées statiques FR/EN | `PASS` | 48 documents générés avec `lang`, title, description et canonical localisés |
@@ -44,7 +44,7 @@ Décision : `PASS` — contenu éditorial complété, vérification locale et pu
 | Actions GitHub | `PASS` | run `40092228767` : build, upload artifact et deploy terminés avec succès |
 | URL `.github.io` | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/fr` HTTP 200 vérifié le 2026-10-24 |
 
-Routes publiques vérifiées : `/fr`, `/en`, `/fr/journal`, `/fr/journal/api-rest-spring-boot`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `/fr/contact`, le CV PDF, `robots.txt` et `sitemap.xml` répondent HTTP 200. Le bundle publié ne contient plus les anciens avertissements de journal. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
+Routes publiques à vérifier après ce déploiement : `/fr`, `/en`, `/fr/projets`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `/fr/parcours`, `/fr/competences`, `/fr/contact`, le CV PDF, `robots.txt` et `sitemap.xml`. Les anciennes pages Journal/Méthode sont volontairement absentes du nouveau sitemap. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
 
 ## Limites connues
 

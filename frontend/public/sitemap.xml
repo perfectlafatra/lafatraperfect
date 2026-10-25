@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Generate absolute URLs with `SITE_URL=https://<verified-pages-origin> npm run sitemap` after the real remote is identified. -->
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/a-propos</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/parcours</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/competences</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/projets</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/contact</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/mentions-legales</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/confidentialite</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/about</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/journey</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/skills</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/projects</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/contact</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/legal</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/privacy</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/projets/react-localstorage</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/projets/lalana</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/projets/zina-tsara-volo</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/fr/projets/mada-bmp</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/projects/react-localstorage</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/projects/lalana</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/projects/zina-tsara-volo</loc></url>
+  <url><loc>https://perfectlafatra.github.io/lafatraperfect/en/projects/mada-bmp</loc></url>
 </urlset>
-

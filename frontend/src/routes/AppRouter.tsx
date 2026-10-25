@@ -7,11 +7,8 @@ import { AboutPage } from '../pages/AboutPage';
 import { ContactPage } from '../pages/ContactPage';
 import { HomePage } from '../pages/HomePage';
 import { JourneyPage } from '../pages/JourneyPage';
-import { JournalPage } from '../pages/JournalPage';
-import { JournalPostPage } from '../pages/JournalPostPage';
 import { LegalPage } from '../pages/LegalPage';
 import { MadaBMPPage } from '../pages/MadaBMPPage';
-import { MethodPage } from '../pages/MethodPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import { PrivacyPage } from '../pages/PrivacyPage';
 import { ProjectDetailPage } from '../pages/ProjectDetailPage';
@@ -31,9 +28,9 @@ function LocalizedLayout({ locale }: { locale: Locale }) {
 function localeRoutes(locale: Locale) {
   const prefix = locale === 'fr' ? 'fr' : 'en';
   const names = locale === 'fr'
-    ? { about: 'a-propos', journey: 'parcours', skills: 'competences', projects: 'projets', method: 'methode', journal: 'journal', legal: 'mentions-legales', privacy: 'confidentialite' }
-    : { about: 'about', journey: 'journey', skills: 'skills', projects: 'projects', method: 'method', journal: 'journal', legal: 'legal', privacy: 'privacy' };
-  return <Route path={prefix} element={<LocalizedLayout locale={locale}/>}><Route index element={<HomePage locale={locale}/>}/><Route path={names.about} element={<AboutPage locale={locale}/>}/><Route path={names.journey} element={<JourneyPage locale={locale}/>}/><Route path={names.skills} element={<SkillsPage locale={locale}/>}/><Route path={names.projects} element={<ProjectsPage locale={locale}/>}/><Route path={`${names.projects}/mada-bmp`} element={<MadaBMPPage locale={locale}/>}/><Route path={`${names.projects}/:slug`} element={<ProjectDetailPage locale={locale}/>}/><Route path={names.method} element={<MethodPage locale={locale}/>}/><Route path={names.journal} element={<JournalPage locale={locale}/>}/><Route path={`${names.journal}/:slug`} element={<JournalPostPage locale={locale}/>}/><Route path="contact" element={<ContactPage locale={locale}/>}/><Route path={names.legal} element={<LegalPage locale={locale}/>}/><Route path={names.privacy} element={<PrivacyPage locale={locale}/>}/><Route path="*" element={<NotFoundPage locale={locale}/>}/></Route>;
+    ? { about: 'a-propos', journey: 'parcours', skills: 'competences', projects: 'projets', legal: 'mentions-legales', privacy: 'confidentialite' }
+    : { about: 'about', journey: 'journey', skills: 'skills', projects: 'projects', legal: 'legal', privacy: 'privacy' };
+  return <Route path={prefix} element={<LocalizedLayout locale={locale}/>}><Route index element={<HomePage locale={locale}/>}/><Route path={names.about} element={<AboutPage locale={locale}/>}/><Route path={names.journey} element={<JourneyPage locale={locale}/>}/><Route path={names.skills} element={<SkillsPage locale={locale}/>}/><Route path={names.projects} element={<ProjectsPage locale={locale}/>}/><Route path={`${names.projects}/mada-bmp`} element={<MadaBMPPage locale={locale}/>}/><Route path={`${names.projects}/:slug`} element={<ProjectDetailPage locale={locale}/>}/><Route path="contact" element={<ContactPage locale={locale}/>}/><Route path={names.legal} element={<LegalPage locale={locale}/>}/><Route path={names.privacy} element={<PrivacyPage locale={locale}/>}/><Route path="*" element={<NotFoundPage locale={locale}/>}/></Route>;
 }
 
 export function AppRouter() {

@@ -19,16 +19,16 @@ describe('premium public shell contract', () => {
   it('exposes a labelled hero with a direct contact action', () => {
     renderHome();
 
-    expect(screen.getByRole('region', { name: /développeur full-stack/i })).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /parlons de votre projet/i })).toHaveLength(2);
-    expect(screen.getAllByRole('link', { name: /parlons de votre projet/i })[0]).toHaveAttribute('href', '/fr/contact');
+    expect(screen.getByRole('region', { name: /développeur web full-stack/i })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /me contacter/i })).toHaveLength(2);
+    expect(screen.getAllByRole('link', { name: /me contacter/i })[0]).toHaveAttribute('href', '/fr/contact');
   });
 
   it('exposes labelled evidence and case-study regions', () => {
     renderHome();
 
-    expect(screen.getByRole('region', { name: /preuves sélectionnées/i })).toBeInTheDocument();
-    expect(screen.getByRole('region', { name: /études de cas/i })).toBeInTheDocument();
-    expect(screen.getByRole('region', { name: /journal technique/i })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /projets sélectionnés/i })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /compétences techniques/i })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /parcours professionnel/i })).toBeInTheDocument();
   });
 });

@@ -1,26 +1,25 @@
-import type { StarCaseStudy } from '../../content/caseStudies.fr';
+import type { CaseStudyContent } from '../../content/caseStudies.fr';
 
-/** Étapes STAR enrichies : libellés bilingues par section. */
-const starSteps = {
+const caseStudySections = {
   fr: [
-    { key: 'situation', label: 'S — Situation' },
-    { key: 'tasks', label: 'T — Tâches' },
-    { key: 'actions', label: 'A — Actions techniques' },
-    { key: 'results', label: 'R — Résultats' },
-    { key: 'limits', label: 'Limites et preuves' },
-    { key: 'lessons', label: 'Enseignements' }
+    { key: 'context', label: 'Contexte du projet' },
+    { key: 'role', label: 'Mon rôle' },
+    { key: 'implementation', label: 'Travail réalisé' },
+    { key: 'outcomes', label: 'Résultats obtenus' },
+    { key: 'publishedScope', label: 'Périmètre publié' },
+    { key: 'technicalDecisions', label: 'Décisions techniques' }
   ],
   en: [
-    { key: 'situation', label: 'S — Situation' },
-    { key: 'tasks', label: 'T — Tasks' },
-    { key: 'actions', label: 'A — Technical actions' },
-    { key: 'results', label: 'R — Results' },
-    { key: 'limits', label: 'Limits and evidence' },
-    { key: 'lessons', label: 'Lessons learned' }
+    { key: 'context', label: 'Project context' },
+    { key: 'role', label: 'My role' },
+    { key: 'implementation', label: 'Implementation' },
+    { key: 'outcomes', label: 'Outcomes' },
+    { key: 'publishedScope', label: 'Published scope' },
+    { key: 'technicalDecisions', label: 'Technical decisions' }
   ]
 } as const;
 
-export function CaseStudySections({ content, locale }: { content: StarCaseStudy; locale: 'fr' | 'en' }) {
-  return <div className="case-grid">{starSteps[locale].map((step, index) => <section key={step.key}><span className="section-index">0{index + 1}</span><h2>{step.label}</h2><p>{content[step.key]}</p></section>)}</div>;
+export function CaseStudySections({ content, locale }: { content: CaseStudyContent; locale: 'fr' | 'en' }) {
+  return <div className="case-grid">{caseStudySections[locale].map((section, index) => <section key={section.key}><span className="section-index">0{index + 1}</span><h2>{section.label}</h2><p>{content[section.key]}</p></section>)}</div>;
 }
 
