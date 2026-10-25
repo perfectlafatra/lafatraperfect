@@ -18,7 +18,7 @@ Décision : `PASS` — portfolio recentré sur le profil candidat, les projets, 
 | Routes profondes | `PASS` | 24 documents `dist/**/index.html` + `404.html` ; Journal/Méthode retirés du périmètre public |
 | Base projet GitHub Pages | `PASS` | build vérifié avec `VITE_BASE_PATH=/lafatraperfect/` |
 | Router et médias sous base projet | `PASS` | `BrowserRouter.basename`, portraits, manifest et assets utilisent `BASE_URL` |
-| Métadonnées statiques FR/EN | `PASS` | 48 documents générés avec `lang`, title, description et canonical localisés |
+| Métadonnées statiques FR/EN | `PASS` | 24 documents de route générés avec `lang`, title, description et canonical localisés |
 | Workflow Pages | `PASS` | `tools/check-pages-workflow.mjs` |
 | Archive P1 | `PASS` | 194 fichiers, SHA-256 : 0 mismatch avant déplacement ; copie externe restaurable |
 | Secret scan P0 | `PASS` | aucun secret, URL fictive ou asset ZINA privé dans le périmètre public |
@@ -38,13 +38,13 @@ Décision : `PASS` — portfolio recentré sur le profil candidat, les projets, 
 | élément | statut | raison |
 |---|---|---|
 | remote Git | `PASS` | `origin=https://github.com/perfectlafatra/lafatraperfect.git`, branche `master` |
-| commit public | `PASS` | mise à jour éditoriale poussée sur `master` après recette locale |
+| commit public | `PASS` | `d12f1a8` poussé sur `master` après recette locale |
 | push normal | `PASS` | push normal vers `perfectlafatra/lafatraperfect` |
 | Source Pages | `CONFIGURED` | GitHub UI confirme `Source: GitHub Actions` le 2026-10-24 |
-| Actions GitHub | `PASS` | run `40092228767` : build, upload artifact et deploy terminés avec succès |
-| URL `.github.io` | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/fr` HTTP 200 vérifié le 2026-10-24 |
+| Actions GitHub | `PASS` | run `40221030684` du commit `d12f1a8` : build, upload artifact et deploy terminés avec succès |
+| URL `.github.io` | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/fr` HTTP 200 vérifié le 2026-10-25 |
 
-Routes publiques à vérifier après ce déploiement : `/fr`, `/en`, `/fr/projets`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `/fr/parcours`, `/fr/competences`, `/fr/contact`, le CV PDF, `robots.txt` et `sitemap.xml`. Les anciennes pages Journal/Méthode sont volontairement absentes du nouveau sitemap. Ne pas pousser le dépôt Mada-BMP ni l’archive P1.
+Recette publique du 2026-10-25 : `/fr`, `/en`, `/fr/projets`, `/fr/projets/mada-bmp`, `/fr/projets/zina-tsara-volo`, `/fr/parcours`, `/fr/competences`, `/fr/contact`, le CV PDF, `robots.txt` et `sitemap.xml` répondent tous en HTTP 200. Le bundle publié contient « Projets sélectionnés » et « React · Spring Boot · PostgreSQL » ; il ne contient plus les anciens intitulés Journal/Méthode/STAR. `/fr/journal` et `/fr/methode` répondent en HTTP 404 et sont absents du sitemap. Le dépôt Mada-BMP et l’archive P1 n’ont pas été poussés.
 
 ## Limites connues
 
