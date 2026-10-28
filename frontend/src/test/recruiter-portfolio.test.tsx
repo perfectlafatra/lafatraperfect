@@ -23,8 +23,8 @@ describe('recruiter-first portfolio contract', () => {
   it('keeps the public navigation focused on the candidate', () => {
     renderPath('/fr');
 
-    expect(screen.getByRole('heading', { level: 1, name: /développeur web full-stack/i })).toBeInTheDocument();
-    expect(screen.getByText('React · Spring Boot · PostgreSQL')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /développeur java.*full-stack/i })).toBeInTheDocument();
+    expect(screen.getAllByText('Java · Spring Boot · React · PostgreSQL').length).toBeGreaterThan(0);
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).toHaveTextContent('Projets');
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).not.toHaveTextContent(/Journal|Méthode/i);
     expect(screen.queryByRole('heading', { name: /journal technique/i })).not.toBeInTheDocument();

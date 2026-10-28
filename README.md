@@ -1,4 +1,4 @@
-# LAFATRAPERFECT — portfolio statique
+# Portfolio professionnel — Fitahiana Lafatra
 
 Portfolio professionnel bilingue FR/EN, construit avec React, Vite, TypeScript strict et Tailwind CSS. Le périmètre public est une vitrine statique : aucun backend, PostgreSQL, formulaire serveur ou espace administrateur n’est requis pour la consulter.
 

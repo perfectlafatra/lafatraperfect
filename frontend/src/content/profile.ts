@@ -1,9 +1,9 @@
 export const profile = {
-  name: 'LAFATRAPERFECT',
-  role: { fr: 'Développeur Full-Stack', en: 'Full-Stack Developer' },
+  name: 'RANDRIAMANANTENA Fitahiana Lafatra',
+  role: { fr: 'Développeur Java junior | Full-Stack', en: 'Junior Java Developer | Full-Stack' },
   summary: {
-    fr: 'Développeur Web Full-Stack orienté React et Spring Boot. Je travaille avec React, TypeScript et JavaScript depuis 2024 ; mes projets concrets utilisent PostgreSQL et j’ai pratiqué MySQL pendant un an à partir de 2024.',
-    en: 'Full-Stack Web Developer focused on React and Spring Boot. I have worked with React, TypeScript and JavaScript since 2024; my concrete projects use PostgreSQL, and I practised MySQL for one year starting in 2024.'
+    fr: 'Développeur Java junior et Full-Stack, étudiant en Master 1 M2I à l’EMIT. Mes projets associent Spring Boot ou Jakarta EE, React et PostgreSQL ; je travaille avec TypeScript et JavaScript depuis 2024 et j’ai pratiqué MySQL pendant un an à partir de 2024.',
+    en: 'Junior Java and Full-Stack developer, currently a Master 1 M2I student at EMIT. My projects combine Spring Boot or Jakarta EE, React and PostgreSQL; I have worked with TypeScript and JavaScript since 2024 and practised MySQL for one year starting in 2024.'
   },
   availability: {
     fr: 'Ouvert aux opportunités de développeur Web Full-Stack à Antananarivo et aux collaborations à distance.',

@@ -19,7 +19,7 @@ describe('premium public shell contract', () => {
   it('exposes a labelled hero with a direct contact action', () => {
     renderHome();
 
-    expect(screen.getByRole('region', { name: /développeur web full-stack/i })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /développeur java.*full-stack/i })).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /me contacter/i })).toHaveLength(2);
     expect(screen.getAllByRole('link', { name: /me contacter/i })[0]).toHaveAttribute('href', '/fr/contact');
   });

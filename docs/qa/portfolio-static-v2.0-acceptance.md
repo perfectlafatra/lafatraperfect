@@ -14,7 +14,7 @@ Décision : `PASS` — portfolio recentré sur le profil candidat, les projets, 
 | Contrat statique sans API/Axios | `PASS` | `src/test/static-contract.test.ts`, API proxy absent |
 | FR/EN et parité des clés | `PASS` | `i18n-parity.test.ts`, contrat public |
 | Couvertures projet | `PASS` | 4 projets, une couverture, alt et provenance par projet |
-| ZINA | `PASS` | une illustration conceptuelle, aucune galerie ni capture privée |
+| ZINA | `PASS` | couverture et deux preuves issues de l’étude publique finale signée ; aucune donnée client réelle |
 | Routes profondes | `PASS` | 24 documents `dist/**/index.html` + `404.html` ; Journal/Méthode retirés du périmètre public |
 | Base projet GitHub Pages | `PASS` | build vérifié avec `VITE_BASE_PATH=/lafatraperfect/` |
 | Router et médias sous base projet | `PASS` | `BrowserRouter.basename`, portraits, manifest et assets utilisent `BASE_URL` |
@@ -26,11 +26,11 @@ Décision : `PASS` — portfolio recentré sur le profil candidat, les projets, 
 
 ## Contenu et honnêteté
 
-- Positionnement visible : Développeur Web Full-Stack — React & Spring Boot.
+- Positionnement visible : Développeur Java junior | Full-Stack.
 - React, TypeScript et JavaScript sont déclarés depuis 2024 ; MySQL est décrit comme manipulé pendant un an à partir de 2024 ; PostgreSQL est réservé aux projets web concrets.
 - Mada-BMP reste une étude de cas distincte et ne reçoit pas de statut production ou live sans preuve publique.
-- ZINA est présenté sous confidentialité, avec une seule illustration conceptuelle et aucun identifiant, email, téléphone, commande ou écran interne repris des documents source.
-- Natur’Ally/Java Swing et les éléments Java EE ne sont pas dans l’index public des projets.
+- ZINA utilise uniquement les captures autorisées de l’étude publique finale signée ; les emails, commandes, coordonnées et autres écrans internes restent exclus.
+- Natur’Ally/Java Swing reste hors de l’index public. VolaTech y présente désormais Java EE/Jakarta EE comme projet académique documenté, sans le confondre avec une expérience salariée ou un service en production.
 - Contact et CV : `PASS` — email `mailto:` configuré et CV local publié sous `frontend/public/cv/`.
 
 ## Publication externe
@@ -48,7 +48,7 @@ Recette publique du 2026-10-25 : `/fr`, `/en`, `/fr/projets`, `/fr/projets/mada-
 
 ## Limites connues
 
-- Le chunk Three.js du hero existant dépasse 500 kB minifié ; le build passe, mais une optimisation ultérieure par import dynamique ou variante sans 3D est recommandée.
+- Le hero public utilise désormais un portrait statique et ne charge plus de canvas 3D ; les anciens composants 3D restent hors du graphe de build actif.
 - Les URLs Unsplash CDN sont des illustrations conceptuelles ; leur licence/provenance doit être confirmée avant publication finale et peut être remplacée par des SVG locaux originaux.
 - Les métadonnées runtime sont complétées par la génération des routes, sans SSR complet.
 
@@ -68,3 +68,28 @@ Recette publique du 2026-10-25 : `/fr`, `/en`, `/fr/projets`, `/fr/projets/mada-
 | Médias publiés | `PASS` | trois URLs Lalana HTTP 200; tailles publiées identiques aux fichiers inventoriés |
 
 Le bundle public `assets/index-dt0j5CMH.js` contient les nouveaux marqueurs éditoriaux et techniques : `Java 17`, `Spring Data JPA`, `Spring Security`, `Le code source audité` et `Lalana — Nosy Be Travel Agency`.
+
+## Mise à jour VolaTech — 2026-10-28
+
+| contrôle | statut | preuve |
+|---|---|---|
+| Portée des changements | `PASS` | seuls le dépôt Portfolio, ses tests, ses médias et sa documentation ont été modifiés ; aucune compilation ni écriture dans le projet VolaTech |
+| Présentation FR/EN | `PASS` | VolaTech ajouté comme projet académique Jakarta EE, distinct d’une expérience salariée ou d’un service en production |
+| Exactitude technique | `PASS` | Java 17, WAR Maven/WildFly, Servlets/JSP, services, repositories JDBC/DataSource et PostgreSQL recoupés avec les sources |
+| Honnêteté fonctionnelle | `PASS` | paiement déclaré simulé, QR décrit comme référence de dossier, aucun paiement réel ni preuve cryptographique revendiqué |
+| Preuves visuelles | `PASS` | couverture boutique/panier, retrait QR et facture PDF issus du dossier fourni ; données personnelles floutées |
+| Tests VolaTech | `PASS` | 4 tests dédiés FR/EN, contrat des médias et galerie accessible |
+| Recette frontend complète | `PASS` | 14 fichiers, 39 tests ; lint, TypeScript/Vite, 26 routes, liens et contrats passent avec `VITE_BASE_PATH=/lafatraperfect/` |
+| Build VolaTech externe | `NOT_RUN` | volontairement hors périmètre ; l’application VolaTech n’a pas été compilée, lancée ou modifiée |
+| Publication GitHub Pages | `PENDING` | à compléter après commit, push, workflow Pages et contrôle HTTP public |
+
+## Finalisation recruteur et dossiers publics signés — 2026-10-28
+
+| contrôle | statut | preuve |
+|---|---|---|
+| Identité candidat | `PASS` | nom complet, positionnement Java junior / Full-Stack, Master 1 M2I et stack principale visibles dans le hero |
+| Dossiers Lalana, VolaTech, ZINA | `PASS` | PDF consultables/téléchargeables et PPTX téléchargeables, fichiers et SHA-256 inventoriés |
+| Confidentialité Mada-BMP | `PASS` | aucun manuel ou support interne Mada-BMP sous `frontend/public` |
+| UI/UX | `PASS` | hero statique, grille éditoriale existante conservée, actions 44 px, focus et responsive maintenus |
+| Recette frontend complète | `PASS` | `npm run verify` : lint, 15 fichiers / 44 tests, TypeScript strict, build 268,57 kB (gzip 85,68 kB), liens, contrat public et 26 routes + 404 passent |
+| Publication GitHub Pages | `PENDING` | à compléter après commit, push, workflow Pages et contrôle HTTP public |

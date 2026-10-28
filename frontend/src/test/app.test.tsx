@@ -19,16 +19,16 @@ describe('public application', () => {
   it('renders a complete French recruiter journey without an API', () => {
     renderPath('/fr');
 
-    expect(screen.getByRole('heading', { level: 1, name: /développeur web full-stack/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /développeur java.*full-stack/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /projets sélectionnés/i })).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /lire l'étude de cas/i })).toHaveLength(3);
+    expect(screen.getAllByRole('link', { name: /lire l'étude de cas/i })).toHaveLength(4);
     expect(screen.getAllByRole('link', { name: /découvrir mada-bmp/i })).toHaveLength(1);
   });
 
   it('renders the English home with an English document language', () => {
     renderPath('/en');
 
-    expect(screen.getByRole('heading', { level: 1, name: /full-stack web developer/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /junior java.*full-stack/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /skip to content/i })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: /primary navigation/i })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: /legal navigation/i })).toBeInTheDocument();

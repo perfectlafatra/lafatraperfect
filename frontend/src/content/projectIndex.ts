@@ -1,4 +1,4 @@
-export type ProjectSlug = 'react-localstorage' | 'lalana' | 'zina-tsara-volo' | 'mada-bmp';
+export type ProjectSlug = 'react-localstorage' | 'lalana' | 'volatech' | 'zina-tsara-volo' | 'mada-bmp';
 export type EvidenceStatus = 'documented' | 'demo-simulated' | 'live-verified' | 'in-progress';
 export type MediaEvidenceType = 'SCREENSHOT_REAL' | 'ILLUSTRATION_ORIGINAL' | 'ILLUSTRATION_AI' | 'THIRD_PARTY';
 
@@ -15,6 +15,11 @@ export interface ProjectEvidenceAsset extends CoverAsset {
   height: number;
 }
 
+export interface ProjectResources {
+  pdf: string;
+  pptx: string;
+}
+
 export interface ProjectSummary {
   slug: ProjectSlug;
   title: { fr: string; en: string };
@@ -26,6 +31,7 @@ export interface ProjectSummary {
   demoUrl: string | null;
   cover: CoverAsset;
   evidence?: ProjectEvidenceAsset[];
+  resources?: ProjectResources;
 }
 
 const portfolioAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
@@ -102,25 +108,132 @@ const projectEntries: ProjectSummary[] = [
         type: 'SCREENSHOT_REAL',
         provenance: 'Planche locale fournie et autorisée par le propriétaire le 2026-10-28.'
       }
-    ]
+    ],
+    resources: {
+      pdf: portfolioAsset('documents/projects/lalana/Lalana_Etude_de_Cas_Publique_FINAL_SIGNEE.pdf'),
+      pptx: portfolioAsset('documents/projects/lalana/Lalana_Etude_de_Cas_Publique_FINAL_SIGNEE.pptx')
+    }
+  },
+  {
+    slug: 'volatech',
+    title: {
+      fr: 'VolaTech — vente et retrait de produits',
+      en: 'VolaTech — product sales and pickup'
+    },
+    kind: { fr: 'Projet académique Jakarta EE', en: 'Academic Jakarta EE project' },
+    summary: {
+      fr: 'Boutique de produits informatiques en Java 17 et Jakarta EE, du catalogue au retrait assisté par facture PDF et référence QR.',
+      en: 'An IT product store built with Java 17 and Jakarta EE, from catalogue browsing to pickup supported by a PDF invoice and QR reference.'
+    },
+    technologies: ['Java 17', 'Jakarta EE', 'JSP / Servlets', 'JDBC', 'PostgreSQL'],
+    proofStatus: 'documented',
+    demoVerified: false,
+    demoUrl: null,
+    cover: {
+      src: portfolioAsset('media/projects/volatech/01-boutique-panier.png'),
+      alt: {
+        fr: 'Catalogue de produits informatiques VolaTech avec le panier latéral ouvert',
+        en: 'VolaTech IT product catalogue with the side cart open'
+      },
+      type: 'SCREENSHOT_REAL',
+      provenance: 'Capture locale issue du dossier VolaTech fourni et autorisé par le propriétaire le 2026-10-28 ; données de démonstration.'
+    },
+    evidence: [
+      {
+        src: portfolioAsset('media/projects/volatech/02-retrait-qr.png'),
+        alt: {
+          fr: 'Écran de retrait assisté par QR dans l’administration VolaTech',
+          en: 'QR-assisted pickup screen in the VolaTech administration area'
+        },
+        caption: {
+          fr: 'Validation du retrait côté administration à partir de la référence portée par le QR ; les données visibles sont fictives ou floutées.',
+          en: 'Administrator-side pickup validation using the reference carried by the QR; visible data is fictitious or blurred.'
+        },
+        width: 1902,
+        height: 915,
+        type: 'SCREENSHOT_REAL',
+        provenance: 'Capture locale issue du dossier VolaTech fourni et autorisé par le propriétaire le 2026-10-28 ; données de démonstration floutées.'
+      },
+      {
+        src: portfolioAsset('media/projects/volatech/03-facture-pdf.png'),
+        alt: {
+          fr: 'Facture PDF VolaTech avec référence QR et informations personnelles floutées',
+          en: 'VolaTech PDF invoice with a QR reference and blurred personal information'
+        },
+        caption: {
+          fr: 'Facture générée en PDF après la commande, avec référence QR pour retrouver le dossier lors du retrait.',
+          en: 'PDF invoice generated after the order, with a QR reference used to retrieve the record at pickup.'
+        },
+        width: 736,
+        height: 844,
+        type: 'SCREENSHOT_REAL',
+        provenance: 'Capture locale issue du dossier VolaTech fourni et autorisé par le propriétaire le 2026-10-28 ; données personnelles floutées.'
+      }
+    ],
+    resources: {
+      pdf: portfolioAsset('documents/projects/volatech/VolaTech_Etude_de_Cas_Publique_FINAL_SIGNEE.pdf'),
+      pptx: portfolioAsset('documents/projects/volatech/VolaTech_Etude_de_Cas_Publique_FINAL_SIGNEE.pptx')
+    }
   },
   {
     slug: 'zina-tsara-volo',
-    title: { fr: 'Zina by Tsara Volo', en: 'Zina by Tsara Volo' },
+    title: {
+      fr: 'ZINA by Tsara Volo — plateforme Web Full-Stack',
+      en: 'ZINA by Tsara Volo — Full-Stack Web platform'
+    },
     kind: { fr: 'Stage · projet Full-Stack', en: 'Internship · Full-Stack project' },
     summary: {
-      fr: 'Stage du 16 juin au 16 septembre 2025 : plateforme web ZINA documentée côté React/JavaScript et Spring Boot/PostgreSQL, sans donnée client publiée.',
-      en: 'Internship from 16 June to 16 September 2025: ZINA web platform documented with React/JavaScript and Spring Boot/PostgreSQL, with no client data published.'
+      fr: 'Projet de fin de Licence réalisé en stage en 2025 : commerce, services et relation client articulés avec React, Spring Boot et PostgreSQL.',
+      en: 'Final Licence project completed during a 2025 internship: commerce, services and customer relations connected through React, Spring Boot and PostgreSQL.'
     },
     technologies: ['React', 'JavaScript', 'Spring Boot', 'PostgreSQL'],
     proofStatus: 'documented',
     demoVerified: false,
     demoUrl: null,
     cover: {
-      src: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80',
-      alt: { fr: 'Illustration conceptuelle d’une plateforme web de soins capillaires', en: 'Conceptual illustration of a hair-care web platform' },
-      type: 'THIRD_PARTY',
-      provenance: 'Unsplash CDN — illustration conceptuelle remplaçant toute capture ZINA non autorisée; licence à vérifier avant publication.'
+      src: portfolioAsset('media/projects/zina/01-accueil-zina.jpg'),
+      alt: {
+        fr: 'Page d’accueil publique de la plateforme ZINA by Tsara Volo',
+        en: 'Public home page of the ZINA by Tsara Volo platform'
+      },
+      type: 'SCREENSHOT_REAL',
+      provenance: 'Capture originale publiée dans l’étude de cas ZINA signée et autorisée par le propriétaire le 2026-10-28.'
+    },
+    evidence: [
+      {
+        src: portfolioAsset('media/projects/zina/02-services-zina.jpg'),
+        alt: {
+          fr: 'Catalogue public des services capillaires de ZINA',
+          en: 'ZINA public hair-care services catalogue'
+        },
+        caption: {
+          fr: 'Catalogue des services : présentation des prestations et accès aux parcours associés.',
+          en: 'Services catalogue: presentation of treatments and access to related journeys.'
+        },
+        width: 1907,
+        height: 895,
+        type: 'SCREENSHOT_REAL',
+        provenance: 'Capture originale publiée dans l’étude de cas ZINA signée et autorisée le 2026-10-28.'
+      },
+      {
+        src: portfolioAsset('media/projects/zina/03-diagnostic-zina.jpg'),
+        alt: {
+          fr: 'Formulaire de diagnostic capillaire de ZINA',
+          en: 'ZINA hair diagnosis form'
+        },
+        caption: {
+          fr: 'Interface de diagnostic : collecte du profil capillaire et orientation des recommandations, sans revendiquer un modèle IA entraîné.',
+          en: 'Diagnosis interface: hair-profile input and recommendation guidance, with no claim of a trained AI model.'
+        },
+        width: 1902,
+        height: 909,
+        type: 'SCREENSHOT_REAL',
+        provenance: 'Capture originale publiée dans l’étude de cas ZINA signée et autorisée le 2026-10-28.'
+      }
+    ],
+    resources: {
+      pdf: portfolioAsset('documents/projects/zina/ZINA_Etude_de_Cas_Publique_FINAL_SIGNEE.pdf'),
+      pptx: portfolioAsset('documents/projects/zina/ZINA_Etude_de_Cas_Publique_FINAL_SIGNEE.pptx')
     }
   },
   {
@@ -144,7 +257,7 @@ const projectEntries: ProjectSummary[] = [
   }
 ];
 
-const projectPriority: ProjectSlug[] = ['mada-bmp', 'zina-tsara-volo', 'react-localstorage', 'lalana'];
+const projectPriority: ProjectSlug[] = ['mada-bmp', 'zina-tsara-volo', 'lalana', 'volatech', 'react-localstorage'];
 
 export const projects = [...projectEntries].sort(
   (left, right) => projectPriority.indexOf(left.slug) - projectPriority.indexOf(right.slug),

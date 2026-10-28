@@ -43,8 +43,8 @@ export const heroAsset: HeroAssetConfig = {
     /* Photo frontale affichée en crossfade quand le visage revient de face. */
     frontUrl: `${import.meta.env.BASE_URL}media/hero/portraits/R.png`,
     alt: {
-      fr: 'Portrait de LAFATRAPERFECT, développeur Full-Stack',
-      en: 'Portrait of LAFATRAPERFECT, Full-Stack Developer'
+      fr: 'Portrait de RANDRIAMANANTENA Fitahiana Lafatra, développeur Java et Full-Stack',
+      en: 'Portrait of RANDRIAMANANTENA Fitahiana Lafatra, Java and Full-Stack developer'
     }
   },
   /* Configuration 3D préservée pour la future reconstruction. */

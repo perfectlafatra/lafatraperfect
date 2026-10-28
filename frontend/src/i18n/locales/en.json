@@ -13,10 +13,11 @@
     "legalNavigation": "Legal navigation"
   },
   "hero": {
+    "name": "RANDRIAMANANTENA Fitahiana Lafatra",
     "eyebrow": "Web developer candidate · Antananarivo",
-    "title": "Full-Stack Web Developer",
-    "stack": "React · Spring Boot · PostgreSQL",
-    "lead": "I build web applications from React interfaces to Spring Boot APIs and PostgreSQL data. Explore my projects, my ZINA internship and my journey since 2024.",
+    "title": "Junior Java Developer | Full-Stack",
+    "stack": "Java · Spring Boot · React · PostgreSQL",
+    "lead": "As a Master 1 M2I student at EMIT, I build web applications from interfaces to Java services and SQL data. My case studies show technical choices, delivered interfaces and their verified limitations.",
     "projects": "View my projects",
     "contact": "Contact me",
     "mada": "Discover Mada-BMP"

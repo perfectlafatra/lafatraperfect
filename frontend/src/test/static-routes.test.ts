@@ -16,6 +16,12 @@ describe('GitHub Pages static routes', () => {
     expect(generator).toContain('Generated');
     expect(generator).toContain('canonical');
     expect(generator).toContain('fr/projets/mada-bmp');
+    expect(generator).toContain('fr/projets/volatech');
+    expect(generator).toContain('en/projects/volatech');
     expect(generator).toContain('en/projects/zina-tsara-volo');
+    expect(generator).toContain('RANDRIAMANANTENA Fitahiana Lafatra');
+    expect(generator).toContain('Développeur Java junior');
+    expect(generator).toContain('VolaTech — vente et retrait de produits');
+    expect(generator).not.toContain('VolaTech — boutique Java EE');
   });
 });

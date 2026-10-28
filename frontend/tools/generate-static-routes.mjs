@@ -14,13 +14,14 @@ export const routes = [
   'fr/a-propos', 'en/about', 'fr/parcours', 'en/journey', 'fr/competences', 'en/skills',
   'fr/projets', 'en/projects',
   'fr/contact', 'en/contact', 'fr/mentions-legales', 'en/legal', 'fr/confidentialite', 'en/privacy',
-  'fr/projets/react-localstorage', 'fr/projets/lalana', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
-  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
+  'fr/projets/react-localstorage', 'fr/projets/lalana', 'fr/projets/volatech', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
+  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/volatech', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
 ];
 
 const projectTitles = {
   'react-localstorage': ['React localStorage', 'React localStorage'],
   lalana: ['Lalana — étude de cas', 'Lalana — case study'],
+  volatech: ['VolaTech — vente et retrait de produits', 'VolaTech — product sales and pickup'],
   'zina-tsara-volo': ['ZINA by Tsara Volo — étude de cas', 'ZINA by Tsara Volo — case study'],
   'mada-bmp': ['Mada-BMP — étude de cas Full-Stack', 'Mada-BMP — Full-Stack case study']
 };
@@ -33,11 +34,13 @@ function metadataFor(route) {
   const english = route === 'en' || route.startsWith('en/');
   const projectSlug = route.match(/(?:projets|projects)\/([^/]+)/)?.[1];
   const title = projectSlug
-    ? projectTitles[projectSlug]?.[english ? 1 : 0] ?? 'LAFATRAPERFECT — Portfolio'
-    : english ? 'LAFATRAPERFECT — Full-Stack Web Developer' : 'LAFATRAPERFECT — Développeur Web Full-Stack';
+    ? projectTitles[projectSlug]?.[english ? 1 : 0] ?? 'RANDRIAMANANTENA Fitahiana Lafatra — Portfolio'
+    : english
+      ? 'RANDRIAMANANTENA Fitahiana Lafatra — Junior Java | Full-Stack Developer'
+      : 'RANDRIAMANANTENA Fitahiana Lafatra — Développeur Java junior | Full-Stack';
   const description = english
-    ? 'Professional portfolio of a React and Spring Boot Full-Stack Web Developer.'
-    : 'Portfolio professionnel d’un développeur Web Full-Stack React et Spring Boot.';
+    ? 'Professional portfolio of a junior Java and Full-Stack developer: Spring Boot, React and PostgreSQL.'
+    : 'Portfolio professionnel d’un développeur Java junior et Full-Stack : Spring Boot, React et PostgreSQL.';
   const canonical = `${base}${route}`;
   let html = template.replace(/<html lang="[^"]*">/, `<html lang="${english ? 'en' : 'fr'}">`);
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);

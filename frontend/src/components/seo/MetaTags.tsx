@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import type { Locale } from '../../routes/publicRoutes';
+import { siteConfig } from '../../config/site';
 
 export function MetaTags({ title, description, locale }: { title: string; description: string; locale: Locale }) {
   useEffect(() => {
-    document.title = `${title} — LAFATRAPERFECT`;
+    document.title = `${title} — ${siteConfig.name}`;
     document.documentElement.lang = locale;
     let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     if (!meta) {
@@ -23,7 +24,7 @@ export function MetaTags({ title, description, locale }: { title: string; descri
       element.content = content;
     };
     const canonicalUrl = new URL(window.location.pathname, window.location.origin).toString();
-    upsert('meta[property="og:title"]', 'property', 'og:title', `${title} — LAFATRAPERFECT`);
+    upsert('meta[property="og:title"]', 'property', 'og:title', `${title} — ${siteConfig.name}`);
     upsert('meta[property="og:description"]', 'property', 'og:description', description);
     upsert('meta[property="og:type"]', 'property', 'og:type', 'website');
     upsert('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);

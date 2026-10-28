@@ -8,8 +8,8 @@ const routes = [
   'fr', 'en', 'fr/a-propos', 'en/about', 'fr/parcours', 'en/journey', 'fr/competences', 'en/skills',
   'fr/projets', 'en/projects', 'fr/contact', 'en/contact',
   'fr/mentions-legales', 'en/legal', 'fr/confidentialite', 'en/privacy',
-  'fr/projets/react-localstorage', 'fr/projets/lalana', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
-  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
+  'fr/projets/react-localstorage', 'fr/projets/lalana', 'fr/projets/volatech', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
+  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/volatech', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
 ];
 for (const route of routes) await access(join(dist, route, 'index.html'));
 await access(join(dist, '404.html'));
