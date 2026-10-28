@@ -81,7 +81,7 @@ Le bundle public `assets/index-dt0j5CMH.js` contient les nouveaux marqueurs édi
 | Tests VolaTech | `PASS` | 4 tests dédiés FR/EN, contrat des médias et galerie accessible |
 | Recette frontend complète | `PASS` | 14 fichiers, 39 tests ; lint, TypeScript/Vite, 26 routes, liens et contrats passent avec `VITE_BASE_PATH=/lafatraperfect/` |
 | Build VolaTech externe | `NOT_RUN` | volontairement hors périmètre ; l’application VolaTech n’a pas été compilée, lancée ou modifiée |
-| Publication GitHub Pages | `PENDING` | à compléter après commit, push, workflow Pages et contrôle HTTP public |
+| Publication GitHub Pages | `PASS` | commit `a825910`, run Pages `40726539552` réussi ; pages VolaTech FR/EN et ressources publiques contrôlées en HTTP 200 |
 
 ## Finalisation recruteur et dossiers publics signés — 2026-10-28
 
@@ -92,4 +92,6 @@ Le bundle public `assets/index-dt0j5CMH.js` contient les nouveaux marqueurs édi
 | Confidentialité Mada-BMP | `PASS` | aucun manuel ou support interne Mada-BMP sous `frontend/public` |
 | UI/UX | `PASS` | hero statique, grille éditoriale existante conservée, actions 44 px, focus et responsive maintenus |
 | Recette frontend complète | `PASS` | `npm run verify` : lint, 15 fichiers / 44 tests, TypeScript strict, build 268,57 kB (gzip 85,68 kB), liens, contrat public et 26 routes + 404 passent |
-| Publication GitHub Pages | `PENDING` | à compléter après commit, push, workflow Pages et contrôle HTTP public |
+| Publication GitHub Pages | `PASS` | commit `a825910` poussé sur `master` ; run Pages `40726539552` terminé avec succès |
+
+Recette publique du 2026-10-28 : les accueils `/fr/` et `/en/`, les pages Lalana, VolaTech et ZINA dans les deux langues, le CV, ainsi que les six dossiers publics signés PDF/PPTX répondent en HTTP 200. Le bundle publié `assets/index-uvTcCFJc.js` contient l’identité complète du candidat, les trois projets et les actions de consultation des dossiers.
