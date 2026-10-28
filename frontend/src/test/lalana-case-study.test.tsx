@@ -16,6 +16,10 @@ function renderPath(path: string) {
   );
 }
 
+function portfolioAsset(path: string) {
+  return `${import.meta.env.BASE_URL}${path}`;
+}
+
 describe('Lalana recruiter case study', () => {
   it('publishes the verified Java project identity and local evidence assets', () => {
     const lalana = projects.find((project) => project.slug === 'lalana');
@@ -32,7 +36,7 @@ describe('Lalana recruiter case study', () => {
       technologies: ['Java 17', 'Spring Boot 3.4', 'Thymeleaf', 'Spring Data JPA', 'PostgreSQL'],
       proofStatus: 'documented',
       cover: {
-        src: '/media/projects/lalana/01-accueil-desktop.png',
+        src: portfolioAsset('media/projects/lalana/01-accueil-desktop.png'),
         type: 'SCREENSHOT_REAL'
       }
     });
@@ -44,13 +48,13 @@ describe('Lalana recruiter case study', () => {
     expect(evidence).toHaveLength(2);
     expect(evidence).toEqual(expect.arrayContaining([
       expect.objectContaining({
-        src: '/media/projects/lalana/04-connexion.png',
+        src: portfolioAsset('media/projects/lalana/04-connexion.png'),
         width: 1440,
         height: 920,
         type: 'SCREENSHOT_REAL'
       }),
       expect.objectContaining({
-        src: '/media/projects/lalana/apercu-interfaces.jpg',
+        src: portfolioAsset('media/projects/lalana/apercu-interfaces.jpg'),
         width: 1320,
         height: 1760,
         type: 'SCREENSHOT_REAL'

@@ -9,7 +9,10 @@ describe('project media contract', () => {
     for (const project of projects) {
       expect(project.cover.src).toMatch(/^(https?:\/\/|\/)/);
       if (project.cover.src.startsWith('/')) {
-        expect(existsSync(resolve('public', project.cover.src.slice(1)))).toBe(true);
+        const assetPath = project.cover.src.startsWith(import.meta.env.BASE_URL)
+          ? project.cover.src.slice(import.meta.env.BASE_URL.length)
+          : project.cover.src.replace(/^\/+/, '');
+        expect(existsSync(resolve('public', assetPath))).toBe(true);
       }
       expect(project.cover.alt.fr.length).toBeGreaterThan(12);
       expect(project.cover.alt.en.length).toBeGreaterThan(12);
