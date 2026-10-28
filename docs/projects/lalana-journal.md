@@ -27,13 +27,24 @@ Les captures ne montrent ni identité personnelle, ni email réel, ni transactio
 
 ### Audit du code source Lalana
 
-La recherche a couvert le dépôt Portfolio, son archive P1, les dossiers `Downloads`, `Documents`, `Desktop`, `C:\Portfolio`, `C:\Projects`, `D:\Projects`, les dossiers de sources utilisateur et les dépôts GitHub publics du compte `perfectlafatra`. Aucun dépôt ou répertoire contenant le code source Lalana ni l’archive `mada_voyage_dump.zip` citée par le PPTX n’a été localisé dans cette session.
+Le code source a été retrouvé dans `D:\Projets_a_rendre\Spring-boot\lalana`. La sauvegarde `mada_voyage_dump.backup` a été inventoriée par nom, taille et empreinte sans être restaurée ni publiée. Aucun fichier de secrets n’a été ouvert ou copié dans le Portfolio.
+
+L’inspection statique confirme :
+
+- Java 17 et Spring Boot 3.4.4 dans `pom.xml` ;
+- Spring MVC, Thymeleaf, Spring Data JPA/Hibernate, PostgreSQL, Spring Security, mail et WebSocket dans les dépendances et sources ;
+- 58 classes Java principales, 10 contrôleurs, 17 services, 9 repositories, 10 modèles et 31 templates Thymeleaf ;
+- des espaces ADMIN, GESTIONNAIRE et CLIENT protégés par autorités, avec mots de passe BCrypt ;
+- des modèles JPA pour utilisateurs, circuits, destinations, vols, réservations, paiements, activités et messages ;
+- des agrégations de réservations et revenus affichées avec Chart.js dans les dashboards.
+
+La revue confirme aussi des limites à ne pas masquer : CSRF est désactivé, des routes de diagnostic/actuator sont publiques, trois méthodes de réservation spécialisées sont encore des squelettes, et le projet ne contient qu’un test de chargement du contexte Spring. Ces éléments empêchent de présenter Lalana comme prêt pour la production ou couvert par une recette E2E.
 
 Conséquence :
 
-- les captures prouvent l’existence des interfaces rendues ;
-- le Portfolio peut présenter la stack Java/Spring/PostgreSQL comme stack documentée par le dossier d’identité, en la séparant des résultats d’exécution ;
-- il ne doit pas affirmer que l’authentification, les réservations, les paiements, les emails, le WebSocket ou les statistiques ont été retestés dans cette session ;
+- les captures prouvent l’existence des interfaces rendues et le code confirme l’architecture affichée ;
+- le Portfolio peut présenter Java/Spring/Thymeleaf/JPA/PostgreSQL et la séparation par rôles comme compétences réellement mobilisées ;
+- il ne doit pas affirmer que les réservations, paiements, emails, WebSocket ou statistiques ont fait l’objet d’une recette fonctionnelle complète ;
 - aucun résultat E2E, taux de couverture, métrique de performance ou statut de production ne sera affiché.
 
 ## 2. Contexte
@@ -63,9 +74,9 @@ Le défi principal est donc de proposer des parcours cohérents sans mélanger l
 
 ## 5. Mon rôle
 
-Le rôle publiable est celui de concepteur et développeur du projet académique : organisation des parcours, intégration des interfaces, structuration des vues et articulation documentée avec Spring Boot et Thymeleaf.
+Le rôle publiable est celui de concepteur et développeur du projet académique : organisation des parcours, intégration des interfaces, structuration des vues et mise en place d’une architecture Spring MVC en couches avec persistance JPA/PostgreSQL.
 
-Le journal ne transforme pas ce projet en mission client et ne revendique pas de résultats de production. Tant que le code source n’est pas retrouvé, il ne détaille pas l’implémentation interne de services qui ne peut pas être relue.
+Le journal ne transforme pas ce projet en mission client et ne revendique pas de résultats de production. Les fonctionnalités incomplètes observées dans les services restent explicitement hors des résultats présentés.
 
 ## 6. Actions techniques documentables
 
@@ -100,12 +111,12 @@ Le résultat vérifiable est donc un ensemble cohérent d’interfaces couvrant 
 - Maintenir une navigation compréhensible entre l’espace public et les espaces de gestion.
 - Différencier les responsabilités client, gestionnaire et administrateur dans l’interface.
 - Garder une identité visuelle cohérente entre pages publiques, formulaire de connexion et dashboards.
-- Présenter aujourd’hui le projet avec honnêteté alors que les captures sont disponibles mais que le code source n’a pas été retrouvé.
+- Distinguer l’architecture effectivement présente des parcours qui demanderaient encore une recette fonctionnelle et un durcissement de sécurité.
 
 ## 9. Enseignements internes
 
 - Une interface multi-rôle gagne à rendre les responsabilités visibles dès la navigation.
-- Les captures d’écran sont une preuve de rendu, pas une preuve suffisante du comportement backend.
+- Les captures d’écran prouvent le rendu ; l’audit du code complète cette preuve sans remplacer des tests fonctionnels.
 - Une étude de cas de recrutement doit séparer ce qui a été observé, ce qui est documenté et ce qui reste non vérifiable.
 - Un projet serveur peut être valorisé dans un Portfolio statique sans embarquer son backend.
 
@@ -134,4 +145,4 @@ Catégorie : **Projet académique Java**
 Stack publiable : **Java 17, Spring Boot 3.4.4, Spring MVC, Thymeleaf, Spring Data JPA/Hibernate, PostgreSQL, Spring Security/BCrypt, Chart.js**  
 Statut : **Projet documenté — démonstration non publique**
 
-Le Portfolio peut afficher JPA/PostgreSQL et Spring Security comme éléments documentés par le dossier d’identité. Il n’affichera pas `WebSocket`, livraison email, paiement réel, OCR, PDF/QR ou tests E2E comme résultats vérifiés tant que l’archive source et un environnement exécutable ne sont pas disponibles.
+Le Portfolio peut afficher JPA/PostgreSQL et Spring Security comme éléments vérifiés dans les sources. Il n’affichera pas `WebSocket`, livraison email, paiement réel, OCR, PDF/QR ou tests E2E comme résultats validés, faute de recette fonctionnelle correspondante.

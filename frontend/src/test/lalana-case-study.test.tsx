@@ -29,7 +29,7 @@ describe('Lalana recruiter case study', () => {
         fr: 'Projet académique Java',
         en: 'Academic Java project'
       },
-      technologies: ['Java', 'Spring Boot', 'Thymeleaf'],
+      technologies: ['Java 17', 'Spring Boot 3.4', 'Thymeleaf', 'Spring Data JPA', 'PostgreSQL'],
       proofStatus: 'documented',
       cover: {
         src: '/media/projects/lalana/01-accueil-desktop.png',
@@ -63,8 +63,10 @@ describe('Lalana recruiter case study', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: 'Lalana — Nosy Be Travel Agency' })).toBeInTheDocument();
     expect(screen.getByText(/application web de réservation touristique/i)).toBeInTheDocument();
+    expect(screen.getByText(/contrôleurs Spring MVC, services métier, repositories Spring Data JPA/i)).toBeInTheDocument();
+    expect(screen.getByText(/Spring Security.*BCrypt/i)).toBeInTheDocument();
     expect(screen.getByText(/sept états d’interface distincts/i)).toBeInTheDocument();
-    expect(screen.getByText(/rendus locaux.*aucune démonstration publique/i)).toBeInTheDocument();
+    expect(screen.getByText(/code source audité.*aucune démonstration publique/i)).toBeInTheDocument();
     expect(screen.queryByText(/application en production|tests e2e réussis/i)).not.toBeInTheDocument();
   });
 
@@ -73,8 +75,10 @@ describe('Lalana recruiter case study', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: 'Lalana — Nosy Be Travel Agency' })).toBeInTheDocument();
     expect(screen.getByText(/travel booking web application/i)).toBeInTheDocument();
+    expect(screen.getByText(/Spring MVC controllers, business services, Spring Data JPA repositories/i)).toBeInTheDocument();
+    expect(screen.getByText(/Spring Security.*BCrypt/i)).toBeInTheDocument();
     expect(screen.getByText(/seven distinct interface states/i)).toBeInTheDocument();
-    expect(screen.getByText(/local renders.*no public demo/i)).toBeInTheDocument();
+    expect(screen.getByText(/source code review.*no public demo/i)).toBeInTheDocument();
     expect(screen.queryByText(/production application|passing e2e tests/i)).not.toBeInTheDocument();
   });
 

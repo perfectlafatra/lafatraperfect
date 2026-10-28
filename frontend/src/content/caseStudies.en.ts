@@ -19,15 +19,15 @@ export const caseStudiesEn: Record<string, CaseStudyContent> = {
     context:
       'An academic project completed in 2025, Lalana is a travel booking web application designed to present the Nosy Be offering and organise separate journeys for visitors, customers and management roles.',
     role:
-      'Design and integrate the views, structure the public navigation and role-based areas, then connect those screens to the documented Spring Boot and Thymeleaf controller/view flow.',
+      'Design the journeys, integrate the Thymeleaf views and structure visitor, customer, manager and administrator areas within a Java Spring Boot application.',
     implementation:
-      'Built the home, services and sign-in views, then organised customer, manager and administration dashboards around the tours, destinations, bookings, flights and users visible in the supplied captures.',
+      'Layered the application through Spring MVC controllers, business services, Spring Data JPA repositories and PostgreSQL-backed models. The views cover home, services, sign-in and management areas for tours, destinations, bookings, flights and users.',
     outcomes:
       'Seven distinct interface states document the outcome: home, services, sign-in, administrator dashboard, manager dashboard, tour management and customer bookings.',
     publishedScope:
-      'The published evidence consists of local renders supplied by the owner. There is no public demo, real user data or production availability claim.',
+      'The source code review and supplied local renders form the presented evidence. There is no public demo, real user data or production availability claim.',
     technicalDecisions:
-      'Server-side rendering with Thymeleaf, a documented Spring Boot controller/view flow and navigation differentiated by the represented roles. The Portfolio remains fully static.'
+      'Server-side rendering with Thymeleaf, JPA/PostgreSQL persistence and role-based access with Spring Security and BCrypt. The code review also identified production hardening still required: CSRF protection, restricted diagnostic routes and completion of selected booking services.'
   },
   'zina-tsara-volo': {
     context:

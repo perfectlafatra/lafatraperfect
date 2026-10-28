@@ -27,15 +27,15 @@ export const caseStudiesFr: Record<string, CaseStudyContent> = {
     context:
       'Projet académique réalisé en 2025, Lalana est une application web de réservation touristique pensée pour présenter l’offre de Nosy Be et organiser des parcours distincts pour les visiteurs, les clients et les profils de gestion.',
     role:
-      'Concevoir et intégrer les vues, structurer la navigation publique et les espaces par rôles, puis relier ces écrans au flux contrôleur/vue documenté avec Spring Boot et Thymeleaf.',
+      'Concevoir les parcours, intégrer les vues Thymeleaf et structurer les espaces visiteur, client, gestionnaire et administrateur au sein d’une application Java Spring Boot.',
     implementation:
-      'Création des vues d’accueil, de services et de connexion, puis organisation des dashboards client, gestionnaire et administration autour des circuits, destinations, réservations, vols et utilisateurs visibles dans les captures.',
+      'Organisation en couches avec contrôleurs Spring MVC, services métier, repositories Spring Data JPA et modèles persistés dans PostgreSQL. Les vues couvrent l’accueil, les services, la connexion et des espaces de gestion pour les circuits, destinations, réservations, vols et utilisateurs.',
     outcomes:
       'Sept états d’interface distincts documentent le résultat : accueil, services, connexion, dashboard administrateur, dashboard gestionnaire, gestion des circuits et réservations client.',
     publishedScope:
-      'Les preuves publiées sont des captures de rendus locaux fournies par le propriétaire. Aucune démonstration publique, donnée réelle ou disponibilité en production n’est revendiquée.',
+      'Le code source audité et les captures de rendus locaux constituent les preuves présentées. Aucune démonstration publique, donnée réelle ou disponibilité en production n’est revendiquée.',
     technicalDecisions:
-      'Rendu serveur avec Thymeleaf, flux contrôleur/vue documenté avec Spring Boot et navigation différenciée selon les rôles représentés. Le Portfolio reste entièrement statique.'
+      'Rendu serveur avec Thymeleaf, persistance JPA/PostgreSQL et accès différenciés avec Spring Security et BCrypt. La revue du code a aussi identifié le durcissement restant avant production : protection CSRF, restriction des routes de diagnostic et finalisation de certains services de réservation.'
   },
   'zina-tsara-volo': {
     context:

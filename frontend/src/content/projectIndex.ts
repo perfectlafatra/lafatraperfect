@@ -58,7 +58,7 @@ const projectEntries: ProjectSummary[] = [
       fr: 'Application de réservation touristique documentée à travers ses parcours publics, son authentification et ses interfaces de gestion par rôles.',
       en: 'A travel booking application documented through its public journeys, authentication and role-based management interfaces.'
     },
-    technologies: ['Java', 'Spring Boot', 'Thymeleaf'],
+    technologies: ['Java 17', 'Spring Boot 3.4', 'Thymeleaf', 'Spring Data JPA', 'PostgreSQL'],
     proofStatus: 'documented',
     demoVerified: false,
     demoUrl: null,
