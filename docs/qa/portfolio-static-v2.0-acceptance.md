@@ -51,3 +51,20 @@ Recette publique du 2026-10-25 : `/fr`, `/en`, `/fr/projets`, `/fr/projets/mada-
 - Le chunk Three.js du hero existant dépasse 500 kB minifié ; le build passe, mais une optimisation ultérieure par import dynamique ou variante sans 3D est recommandée.
 - Les URLs Unsplash CDN sont des illustrations conceptuelles ; leur licence/provenance doit être confirmée avant publication finale et peut être remplacée par des SVG locaux originaux.
 - Les métadonnées runtime sont complétées par la génération des routes, sans SSR complet.
+
+## Mise à jour Lalana — 2026-10-28
+
+| contrôle | statut | preuve |
+|---|---|---|
+| Présentation FR/EN | `PASS` | récit recruteur centré sur le rôle, l’architecture Java et les résultats observables |
+| Preuves visuelles | `PASS` | accueil, connexion et planche des interfaces servis localement avec provenance et empreintes documentées |
+| Honnêteté technique | `PASS` | projet académique, aucune production ni recette E2E revendiquée; limites de sécurité et services incomplets consignés |
+| Tests Lalana | `PASS` | 6 tests dédiés; galerie accessible et absence d’impact sur ZINA vérifiées |
+| Recette frontend complète | `PASS` | 13 fichiers, 35 tests; lint, TypeScript/Vite, 24 routes, liens et contrats passent avec `VITE_BASE_PATH=/lafatraperfect/` |
+| Commits | `PASS` | `5bd16c9` (contenu et preuves) puis `243561a` (contrat média compatible avec la base Pages) |
+| GitHub Actions | `PASS` | run `40674600207`, workflow `Deploy static portfolio to GitHub Pages` terminé avec succès |
+| Page FR | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/fr/projets/lalana/` HTTP 200 |
+| Page EN | `PASS` | `https://perfectlafatra.github.io/lafatraperfect/en/projects/lalana/` HTTP 200 |
+| Médias publiés | `PASS` | trois URLs Lalana HTTP 200; tailles publiées identiques aux fichiers inventoriés |
+
+Le bundle public `assets/index-dt0j5CMH.js` contient les nouveaux marqueurs éditoriaux et techniques : `Java 17`, `Spring Data JPA`, `Spring Security`, `Le code source audité` et `Lalana — Nosy Be Travel Agency`.
