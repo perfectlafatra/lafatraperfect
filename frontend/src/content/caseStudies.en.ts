@@ -17,17 +17,17 @@ export const caseStudiesEn: Record<string, CaseStudyContent> = {
   },
   lalana: {
     context:
-      'A historical web project relying on server-side rendering with Spring Boot and Thymeleaf, to be documented retrospectively.',
+      'An academic project completed in 2025, Lalana is a travel booking web application designed to present the Nosy Be offering and organise separate journeys for visitors, customers and management roles.',
     role:
-      'Present the architecture, data flow and responsibilities without inventing metrics or public availability.',
+      'Design and integrate the views, structure the public navigation and role-based areas, then connect those screens to the documented Spring Boot and Thymeleaf controller/view flow.',
     implementation:
-      'Reviewed the existing code and mapped exchanges between pages, Spring Boot controllers and Thymeleaf views.',
+      'Built the home, services and sign-in views, then organised customer, manager and administration dashboards around the tours, destinations, bookings, flights and users visible in the supplied captures.',
     outcomes:
-      'A clear overview of the server-side architecture, data flow and responsibilities across components.',
+      'Seven distinct interface states document the outcome: home, services, sign-in, administrator dashboard, manager dashboard, tour management and customer bookings.',
     publishedScope:
-      'Historical project presented without a public URL or client screenshot.',
+      'The published evidence consists of local renders supplied by the owner. There is no public demo, real user data or production availability claim.',
     technicalDecisions:
-      'Thymeleaf server rendering, Spring Boot controllers and a clear split between request, processing and view.'
+      'Server-side rendering with Thymeleaf, a documented Spring Boot controller/view flow and navigation differentiated by the represented roles. The Portfolio remains fully static.'
   },
   'zina-tsara-volo': {
     context:

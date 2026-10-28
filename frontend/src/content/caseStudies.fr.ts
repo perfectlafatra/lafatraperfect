@@ -25,17 +25,17 @@ export const caseStudiesFr: Record<string, CaseStudyContent> = {
   },
   lalana: {
     context:
-      'Un projet web historique reposant sur un rendu serveur Spring Boot et Thymeleaf, à documenter rétroactivement.',
+      'Projet académique réalisé en 2025, Lalana est une application web de réservation touristique pensée pour présenter l’offre de Nosy Be et organiser des parcours distincts pour les visiteurs, les clients et les profils de gestion.',
     role:
-      'Présenter l’architecture, le flux de données et les responsabilités sans inventer de métrique ni de disponibilité publique.',
+      'Concevoir et intégrer les vues, structurer la navigation publique et les espaces par rôles, puis relier ces écrans au flux contrôleur/vue documenté avec Spring Boot et Thymeleaf.',
     implementation:
-      'Relecture du code existant et schématisation des échanges entre pages, contrôleurs Spring Boot et vues Thymeleaf.',
+      'Création des vues d’accueil, de services et de connexion, puis organisation des dashboards client, gestionnaire et administration autour des circuits, destinations, réservations, vols et utilisateurs visibles dans les captures.',
     outcomes:
-      'Une synthèse claire de l’architecture serveur, du flux de données et des responsabilités entre les composants.',
+      'Sept états d’interface distincts documentent le résultat : accueil, services, connexion, dashboard administrateur, dashboard gestionnaire, gestion des circuits et réservations client.',
     publishedScope:
-      'Projet historique présenté sans URL publique ni capture client.',
+      'Les preuves publiées sont des captures de rendus locaux fournies par le propriétaire. Aucune démonstration publique, donnée réelle ou disponibilité en production n’est revendiquée.',
     technicalDecisions:
-      'Rendu serveur Thymeleaf, contrôleurs Spring Boot et séparation des responsabilités entre requête, traitement et vue.'
+      'Rendu serveur avec Thymeleaf, flux contrôleur/vue documenté avec Spring Boot et navigation différenciée selon les rôles représentés. Le Portfolio reste entièrement statique.'
   },
   'zina-tsara-volo': {
     context:

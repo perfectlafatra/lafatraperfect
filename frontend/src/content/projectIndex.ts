@@ -1,11 +1,18 @@
 export type ProjectSlug = 'react-localstorage' | 'lalana' | 'zina-tsara-volo' | 'mada-bmp';
 export type EvidenceStatus = 'documented' | 'demo-simulated' | 'live-verified' | 'in-progress';
+export type MediaEvidenceType = 'SCREENSHOT_REAL' | 'ILLUSTRATION_ORIGINAL' | 'ILLUSTRATION_AI' | 'THIRD_PARTY';
 
 export interface CoverAsset {
   src: string;
   alt: { fr: string; en: string };
-  type: 'ILLUSTRATION_ORIGINAL' | 'ILLUSTRATION_AI' | 'THIRD_PARTY';
+  type: MediaEvidenceType;
   provenance: string;
+}
+
+export interface ProjectEvidenceAsset extends CoverAsset {
+  caption: { fr: string; en: string };
+  width: number;
+  height: number;
 }
 
 export interface ProjectSummary {
@@ -18,7 +25,10 @@ export interface ProjectSummary {
   demoVerified: boolean;
   demoUrl: string | null;
   cover: CoverAsset;
+  evidence?: ProjectEvidenceAsset[];
 }
+
+const portfolioAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
 const projectEntries: ProjectSummary[] = [
   {
@@ -42,22 +52,57 @@ const projectEntries: ProjectSummary[] = [
   },
   {
     slug: 'lalana',
-    title: { fr: 'lalana', en: 'lalana' },
-    kind: { fr: 'Projet Web Java', en: 'Java web project' },
+    title: { fr: 'Lalana — Nosy Be Travel Agency', en: 'Lalana — Nosy Be Travel Agency' },
+    kind: { fr: 'Projet académique Java', en: 'Academic Java project' },
     summary: {
-      fr: 'Projet web Spring Boot et Thymeleaf documenté comme expérience historique de rendu serveur et de flux contrôleur/vue.',
-      en: 'Spring Boot and Thymeleaf project documented as a historical experience in server rendering and controller/view flows.'
+      fr: 'Application de réservation touristique documentée à travers ses parcours publics, son authentification et ses interfaces de gestion par rôles.',
+      en: 'A travel booking application documented through its public journeys, authentication and role-based management interfaces.'
     },
-    technologies: ['Spring Boot', 'Thymeleaf'],
-    proofStatus: 'in-progress',
+    technologies: ['Java', 'Spring Boot', 'Thymeleaf'],
+    proofStatus: 'documented',
     demoVerified: false,
     demoUrl: null,
     cover: {
-      src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
-      alt: { fr: 'Illustration conceptuelle d’une architecture web côté serveur', en: 'Conceptual illustration of a server-rendered web architecture' },
-      type: 'THIRD_PARTY',
-      provenance: 'Unsplash CDN — illustration conceptuelle, aucune capture client; licence à vérifier avant publication.'
-    }
+      src: portfolioAsset('media/projects/lalana/01-accueil-desktop.png'),
+      alt: {
+        fr: 'Page d’accueil desktop de Lalana — Nosy Be Travel Agency',
+        en: 'Desktop home page of Lalana — Nosy Be Travel Agency'
+      },
+      type: 'SCREENSHOT_REAL',
+      provenance: 'Capture locale fournie et autorisée par le propriétaire le 2026-10-28.'
+    },
+    evidence: [
+      {
+        src: portfolioAsset('media/projects/lalana/04-connexion.png'),
+        alt: {
+          fr: 'Écran de connexion Lalana avec email, mot de passe et liens de récupération et inscription',
+          en: 'Lalana sign-in screen with email, password, recovery and registration links'
+        },
+        caption: {
+          fr: 'Parcours d’authentification : connexion, récupération du mot de passe et accès à l’inscription.',
+          en: 'Authentication journey: sign-in, password recovery and access to registration.'
+        },
+        width: 1440,
+        height: 920,
+        type: 'SCREENSHOT_REAL',
+        provenance: 'Capture locale fournie et autorisée par le propriétaire le 2026-10-28.'
+      },
+      {
+        src: portfolioAsset('media/projects/lalana/apercu-interfaces.jpg'),
+        alt: {
+          fr: 'Planche des interfaces publiques, client, gestionnaire et administration de Lalana',
+          en: 'Overview board of Lalana public, customer, manager and administration interfaces'
+        },
+        caption: {
+          fr: 'Étendue des interfaces documentées : accueil, services, connexion, dashboards, circuits et réservations.',
+          en: 'Documented interface coverage: home, services, sign-in, dashboards, tours and bookings.'
+        },
+        width: 1320,
+        height: 1760,
+        type: 'SCREENSHOT_REAL',
+        provenance: 'Planche locale fournie et autorisée par le propriétaire le 2026-10-28.'
+      }
+    ]
   },
   {
     slug: 'zina-tsara-volo',
