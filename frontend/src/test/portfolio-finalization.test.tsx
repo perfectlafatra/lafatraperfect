@@ -8,6 +8,7 @@ import { ThemeProvider } from '../contexts/ThemeContext';
 import { projects } from '../content/projectIndex';
 import { caseStudiesFr } from '../content/caseStudies.fr';
 import { siteConfig } from '../config/site';
+import { portraitSequence } from '../config/portraitSequence';
 import { AppRouter } from '../routes/AppRouter';
 
 function publicPath(url: string) {
@@ -93,5 +94,15 @@ describe('urgent recruiter portfolio contract', () => {
     expect(screen.getByRole('img', { name: /portrait du développeur en rotation/i })).toBeInTheDocument();
     expect(document.querySelector('.hero-turntable')).toBeInTheDocument();
     expect(document.querySelector('canvas')).not.toBeInTheDocument();
+  });
+
+  it('serves an optimised portrait sequence while preserving the original sources', () => {
+    const uniqueFrames = [...new Set(portraitSequence.frames)];
+    expect(uniqueFrames).toHaveLength(5);
+    for (const frame of uniqueFrames) {
+      expect(frame).toMatch(/\.webp$/);
+      expect(existsSync(publicPath(frame))).toBe(true);
+    }
+    expect(existsSync(resolve('public/media/hero/portraits/R.png'))).toBe(true);
   });
 });

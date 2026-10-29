@@ -28,14 +28,14 @@ export const portraitSequence: PortraitSequenceConfig = {
   // Verified lateral path from the original portrait set. It starts face-on,
   // visits both profiles and returns through the same authentic angles. Images
   // with a different vertical head pose are excluded to avoid visible jumps.
-  frames: ['R.png', 'R1.png', 'R5.png', 'R1.png', 'R.png', 'R3.png', 'R2.png']
+  frames: ['R.webp', 'R1.webp', 'R5.webp', 'R1.webp', 'R.webp', 'R3.webp', 'R2.webp']
     .map((name) => `${base}${name}`),
   cycleSeconds: 18,
   loopMode: 'pingpong',
   // A short blend softens each angle change without creating a double face.
   transitionFraction: 0.12,
   scrollCycles: 0.05,
-  fallback: `${base}R.png`,
+  fallback: `${base}R.webp`,
   // Once the validated dense sequence exists, enable:
   // manifestUrl: '/media/hero/turntable/manifest.json',
 };

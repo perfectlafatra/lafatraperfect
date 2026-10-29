@@ -39,9 +39,9 @@ export const heroAsset: HeroAssetConfig = {
      Le mode '3D' sera réactivé dès qu'un GLB facial exploitable existera. */
   mode: 'IMAGE',
   image: {
-    url: `${import.meta.env.BASE_URL}media/hero/portraits/R2.png`,
+    url: `${import.meta.env.BASE_URL}media/hero/portraits/R2.webp`,
     /* Photo frontale affichée en crossfade quand le visage revient de face. */
-    frontUrl: `${import.meta.env.BASE_URL}media/hero/portraits/R.png`,
+    frontUrl: `${import.meta.env.BASE_URL}media/hero/portraits/R.webp`,
     alt: {
       fr: 'Portrait de RANDRIAMANANTENA Fitahiana Lafatra, développeur Java et Full-Stack',
       en: 'Portrait of RANDRIAMANANTENA Fitahiana Lafatra, Java and Full-Stack developer'
