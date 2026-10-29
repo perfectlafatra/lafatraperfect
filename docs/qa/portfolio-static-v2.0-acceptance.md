@@ -113,3 +113,21 @@ Recette publique du 2026-10-28 : les accueils `/fr/` et `/en/`, les pages Lalana
 | Recette publique | `PASS` | accueils FR/EN, huit pages projet localisées, contact, CV, quatre PDF, favicon et sitemap contrôlés en HTTP 200 |
 
 Le bundle public `assets/index-Ota7VZET.js` contient les coordonnées exactes et les quatre PDF normalisés. Il ne contient ni l’ancien email, ni le slug `react-localstorage`, ni ressource PPTX. Le sitemap public contient 24 URL et aucune route React localStorage.
+
+## Rotation du portrait et ciblage Java/Web/Data — 2026-10-29
+
+| contrôle | statut | preuve |
+|---|---|---|
+| Téléphones | `PASS` | principal `+261 32 93 777 81`, secondaire `+261 34 48 109 24` et WhatsApp distinct `+261 32 60 463 49` affichés avec leurs liens exacts |
+| Portrait | `PASS` | rotation latérale restaurée à partir de cinq angles existants du propriétaire ; visage frontal au chargement, aucun faux arrière, aucun visage régénéré |
+| Performance des portraits | `PASS` | cinq dérivés WebP 1000×1000 de 44 à 59 Ko servis en HTTP 200 ; PNG originaux préservés hors séquence active |
+| Mouvement accessible | `PASS` | repli frontal statique avec `prefers-reduced-motion` ou sans `IntersectionObserver`, aucun canvas WebGL chargé |
+| Ciblage Java/Web/Data | `PASS` | hero et compétences mettent en avant Java, Spring Boot, HTTP/REST, PostgreSQL/MySQL/SQL, analyse technique, débogage, Windows/Linux et documentation FR/EN |
+| Honnêteté ValueIT | `PARTIAL` | adéquation renforcée sur Java, Web, SQL, analyse et environnements ; aucune expérience de crawler à grande échelle, disponibilité 10 h–19 h ou probabilité d’embauche inventée |
+| Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 46 tests, TypeScript strict, build JS 273,50 kB (gzip 87,88 kB), liens, contrat public et 24 routes + 404 |
+| Contrôle visuel | `PASS` | hero et contact contrôlés localement à 1440 px ; mise en page étroite contrôlée à 500 px, règles fluides actives sous 520 px |
+| Commits et push | `PASS` | `e11200d` (rotation, contacts, ciblage) et `4f56397` (WebP) poussés normalement sur `origin/master` |
+| GitHub Actions Pages | `PASS` | runs `40906317045` et `40910129084` terminés avec succès |
+| Recette publique | `PASS` | `/fr/`, `/en/`, `/fr/contact/`, CV et cinq WebP répondent en HTTP 200 ; bundle `assets/index-CWAfs1FB.js` contient le nouveau téléphone, le WhatsApp, le positionnement Java/Data et la rotation |
+
+URL publique vérifiée : `https://perfectlafatra.github.io/lafatraperfect/fr/`.
