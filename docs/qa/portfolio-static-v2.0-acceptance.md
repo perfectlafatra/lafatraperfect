@@ -95,3 +95,21 @@ Le bundle public `assets/index-dt0j5CMH.js` contient les nouveaux marqueurs édi
 | Publication GitHub Pages | `PASS` | commit `a825910` poussé sur `master` ; run Pages `40726539552` terminé avec succès |
 
 Recette publique du 2026-10-28 : les accueils `/fr/` et `/en/`, les pages Lalana, VolaTech et ZINA dans les deux langues, le CV, ainsi que les six dossiers publics signés PDF/PPTX répondent en HTTP 200. Le bundle publié `assets/index-uvTcCFJc.js` contient l’identité complète du candidat, les trois projets et les actions de consultation des dossiers.
+
+## Harmonisation finale CV, contacts et preuves — 2026-10-29
+
+| contrôle | statut | preuve |
+|---|---|---|
+| Coordonnées CV | `PASS` | adresse complète, `lafatraperfect@gmail.com`, deux téléphones et WhatsApp `+261 32 60 463 49` présents dans le bundle public |
+| Positionnement Java | `PASS` | profil, compétences et chronologie réorganisés autour de Java, Spring Boot et Jakarta EE, sans transformer les projets académiques en expériences salariées |
+| Catalogue projets | `PASS` | quatre projets publics : Mada-BMP, Lalana, VolaTech et ZINA ; React localStorage retiré de l’index et du sitemap |
+| Ressources publiques | `PASS` | un PDF final par projet, quatre fichiers au total ; anciens doublons PDF/PPTX retirés du HEAD public |
+| Images mises à jour | `PASS` | couvertures authentiques Lalana et Mada-BMP intégrées, dimensions conservées, provenance et SHA-256 inventoriés |
+| Favicon | `PASS` | monogramme LF recentré, rasterisation locale 64×64 contrôlée et URL Pages `/lafatraperfect/favicon.svg` générée |
+| Responsive | `PASS` | contrôle visuel local du hero à 390×844 et 1440×1000, contact à 1440×1100 |
+| Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 45 tests, TypeScript strict, build 268,57 kB (gzip 85,74 kB), liens, contrat public et 24 routes + 404 |
+| Commit et push | `PASS` | commit `2212ed5` poussé normalement sur `origin/master` |
+| GitHub Actions Pages | `PASS` | run `40881833026`, workflow terminé avec succès |
+| Recette publique | `PASS` | accueils FR/EN, huit pages projet localisées, contact, CV, quatre PDF, favicon et sitemap contrôlés en HTTP 200 |
+
+Le bundle public `assets/index-Ota7VZET.js` contient les coordonnées exactes et les quatre PDF normalisés. Il ne contient ni l’ancien email, ni le slug `react-localstorage`, ni ressource PPTX. Le sitemap public contient 24 URL et aucune route React localStorage.
