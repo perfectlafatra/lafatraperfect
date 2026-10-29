@@ -131,3 +131,15 @@ Le bundle public `assets/index-Ota7VZET.js` contient les coordonnées exactes et
 | Recette publique | `PASS` | `/fr/`, `/en/`, `/fr/contact/`, CV et cinq WebP répondent en HTTP 200 ; bundle `assets/index-CWAfs1FB.js` contient le nouveau téléphone, le WhatsApp, le positionnement Java/Data et la rotation |
 
 URL publique vérifiée : `https://perfectlafatra.github.io/lafatraperfect/fr/`.
+
+## Documents bilingues FR/EN — 2026-10-29
+
+| contrôle | statut | preuve |
+|---|---|---|
+| CV localisé | `PASS` | `/fr` télécharge le CV français ; `/en` télécharge `randriamanantena-fitahiana-lafatra-resume-en.pdf` |
+| Études de cas localisées | `PASS` | Lalana, Mada-BMP, VolaTech et ZINA sélectionnent chacun un PDF français ou anglais selon la langue active |
+| Intégrité des nouveaux PDF | `PASS` | cinq sources et copies publiques avec SHA-256 identiques, en-tête `%PDF-` et marqueur `%%EOF` présents |
+| Contrat automatisé | `PASS` | huit URL d’études de cas distinctes, fichiers présents et liens FR/EN rendus selon la route |
+| Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 48 tests, TypeScript strict, build JS 274,35 kB (gzip 88,00 kB), liens, contrat public et 24 routes + 404 |
+| Publication GitHub Pages | `PASS` | commit `1c6a5d5` ; run `40926656425` terminé avec succès |
+| Recette publique | `PASS` | accueils FR/EN et dix documents PDF répondent en HTTP 200 avec `Content-Type: application/pdf` ; le bundle public contient les cinq nouvelles URL anglaises |
