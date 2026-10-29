@@ -5,7 +5,7 @@ import { projects } from '../content/projectIndex';
 
 describe('project media contract', () => {
   it('gives each case one documented cover and descriptive alt text', () => {
-    expect(projects).toHaveLength(5);
+    expect(projects).toHaveLength(4);
     for (const project of projects) {
       expect(project.cover.src).toMatch(/^(https?:\/\/|\/)/);
       if (project.cover.src.startsWith('/')) {

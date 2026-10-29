@@ -21,7 +21,7 @@ describe('public application', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: /développeur java.*full-stack/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /projets sélectionnés/i })).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /lire l'étude de cas/i })).toHaveLength(4);
+    expect(screen.getAllByRole('link', { name: /lire l'étude de cas/i })).toHaveLength(3);
     expect(screen.getAllByRole('link', { name: /découvrir mada-bmp/i })).toHaveLength(1);
   });
 

@@ -1,26 +1,6 @@
 import type { CaseStudyContent } from './caseStudies.fr';
 
 export const caseStudiesEn: Record<string, CaseStudyContent> = {
-  'react-localstorage': {
-    context:
-      'An internal need for fast prototyping: handling lists and preferences in the browser, with no backend available at first.',
-    objectives:
-      'Provide a simple interface, retain useful data between sessions and make persistence behaviour easy to verify.',
-    role:
-      'Build a local React application that persists state between sessions and document the design choices.',
-    architecture:
-      'A browser-based React application organised into components and local services, with no remote server or database.',
-    features:
-      'Create, edit and delete items, store interface preferences and restore state from browser storage.',
-    implementation:
-      'Readable component decomposition, controlled localStorage serialisation, handling invalid or missing JSON, cross code review.',
-    outcomes:
-      'A working local application and documentation connecting interface decisions to observed behaviour.',
-    publishedScope:
-      'Built for local use: the code and documentation are the deliverable, with no public deployment.',
-    technicalDecisions:
-      'JSON validation on load, a predictable default state and explicit handling of quota or format errors.'
-  },
   lalana: {
     context:
       'An academic project completed in 2025, Lalana is a travel booking web application designed to present the Nosy Be offering and organise separate journeys for visitors, customers and management roles.',

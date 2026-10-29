@@ -7,7 +7,7 @@ import { ThemeToggle } from '../ui/ThemeToggle';
 import { useScrolled } from '../../hooks/useScrolled';
 import { siteConfig } from '../../config/site';
 
-const navKeys = ['projects', 'journey', 'skills', 'about', 'contact'] as const;
+const navKeys = ['home', 'projects', 'journey', 'skills', 'about', 'contact'] as const;
 
 export function PublicHeader({ locale }: { locale: Locale }) {
   const { t } = useTranslation();

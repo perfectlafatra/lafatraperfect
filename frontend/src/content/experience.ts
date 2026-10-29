@@ -1,29 +1,56 @@
 export const experience = [
   {
-    key: 'frontend',
-    title: { fr: 'Développement web React', en: 'React web development' },
+    key: 'mada-bmp',
+    title: { fr: 'Développeur Full-Stack — Mada-BMP', en: 'Full-Stack Developer — Mada-BMP' },
     description: {
-      fr: 'Conception d’interfaces avec React, TypeScript et JavaScript : composants réutilisables, responsive design, accessibilité et intégration de données.',
-      en: 'Interface development with React, TypeScript and JavaScript: reusable components, responsive design, accessibility and data integration.'
+      fr: 'Projet académique de Master 1 en cours : plateforme de gestion avec React/Vite/TypeScript, API REST Spring Boot et PostgreSQL.',
+      en: 'Ongoing Master 1 academic project: a management platform using React/Vite/TypeScript, a Spring Boot REST API and PostgreSQL.'
     },
-    date: { fr: 'Depuis 2024', en: 'Since 2024' }
+    date: { fr: 'Depuis août 2026', en: 'Since August 2026' }
+  },
+  {
+    key: 'volatech',
+    title: { fr: 'Développeur Web Java EE — VolaTech', en: 'Java EE Web Developer — VolaTech' },
+    description: {
+      fr: 'Projet académique e-commerce avec Java EE/Jakarta EE, Servlets, JSP, JDBC et PostgreSQL, incluant catalogue, commandes, facturation PDF et retrait assisté par QR.',
+      en: 'Academic e-commerce project using Java EE/Jakarta EE, Servlets, JSP, JDBC and PostgreSQL, covering catalogue, orders, PDF invoicing and QR-assisted pickup.'
+    },
+    date: { fr: 'Février → mai 2026', en: 'February → May 2026' }
   },
   {
     key: 'zina-internship',
-    title: { fr: 'Stage développeur web — ZINA by Tsara Volo', en: 'Web Developer Internship — ZINA by Tsara Volo' },
+    title: { fr: 'Stage développeur Full-Stack — ZINA by Tsara Volo', en: 'Full-Stack Developer Internship — ZINA by Tsara Volo' },
     description: {
-      fr: 'Contribution à une plateforme React et Spring Boot : espace client, CRM, boutique, diagnostic capillaire, rendez-vous et notifications, avec PostgreSQL.',
-      en: 'Contributed to a React and Spring Boot platform: customer area, CRM, shop, hair diagnosis, appointments and notifications, backed by PostgreSQL.'
+      fr: 'Stage de fin de Licence : contribution à une plateforme React/Vite et Spring Boot avec API REST et PostgreSQL, autour de la boutique, des services et de la relation client.',
+      en: 'Final Licence internship: contributed to a React/Vite and Spring Boot platform with a REST API and PostgreSQL for commerce, services and customer relations.'
     },
     date: { fr: '16 juin → 16 septembre 2025', en: '16 June → 16 September 2025' }
   },
   {
-    key: 'mada-bmp',
-    title: { fr: 'Mada-BMP — projet Full-Stack', en: 'Mada-BMP — Full-Stack project' },
+    key: 'lalana',
+    title: { fr: 'Développeur Java / Spring Boot — Lalana', en: 'Java / Spring Boot Developer — Lalana' },
     description: {
-      fr: 'Conception d’une plateforme de gestion pour indépendants et petites structures avec React, Spring Boot, PostgreSQL, tests et documentation technique.',
-      en: 'Designing a management platform for independent professionals and small organisations with React, Spring Boot, PostgreSQL, tests and technical documentation.'
+      fr: 'Projet académique de gestion touristique avec Java 17, Spring Boot, Spring MVC, Thymeleaf, Spring Security, JPA et PostgreSQL.',
+      en: 'Academic travel-management project using Java 17, Spring Boot, Spring MVC, Thymeleaf, Spring Security, JPA and PostgreSQL.'
     },
-    date: { fr: '2026 → aujourd’hui', en: '2026 → present' }
+    date: { fr: 'Avril → juin 2025', en: 'April → June 2025' }
+  },
+  {
+    key: 'master',
+    title: { fr: 'Master 1 — Modélisation et Ingénierie Informatique', en: 'Master 1 — Modelling and Computer Engineering' },
+    description: {
+      fr: 'Formation Bac+4 en cours à l’EMIT — Université de Fianarantsoa, orientée modélisation et architecture logicielle.',
+      en: 'Ongoing Bac+4 programme at EMIT — University of Fianarantsoa, focused on modelling and software architecture.'
+    },
+    date: { fr: '2025 → aujourd’hui', en: '2025 → present' }
+  },
+  {
+    key: 'licence',
+    title: { fr: 'Licence — Développement d’Applications Internet/Intranet', en: 'Licence — Internet/Intranet Application Development' },
+    description: {
+      fr: 'Licence DA2I obtenue à l’EMIT — Université de Fianarantsoa : bases de données relationnelles, algorithmique, développement web et programmation réseau.',
+      en: 'DA2I Licence completed at EMIT — University of Fianarantsoa: relational databases, algorithms, web development and network programming.'
+    },
+    date: { fr: '2022 → 2025', en: '2022 → 2025' }
   }
 ] as const;

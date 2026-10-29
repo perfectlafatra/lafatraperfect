@@ -1,12 +1,21 @@
 import type { Locale } from '../../routes/publicRoutes';
 
 const groups = [
-  { title: 'Frontend', items: ['React 18', 'TypeScript strict', 'Vite 5', 'Tailwind CSS 3', 'Accessibilité'] },
-  { title: 'Backend', items: ['Java 17', 'Spring Boot 4', 'Spring Security', 'REST', 'Validation'] },
-  { title: 'Data & delivery', items: ['PostgreSQL 18', 'MySQL', 'Flyway', 'Docker', 'Git', 'QA automatisée'] }
+  {
+    title: { fr: 'Java & Backend', en: 'Java & Backend' },
+    items: ['Java · POO', 'Spring Boot · MVC · Security', 'Jakarta EE · Servlets · JSP · JDBC', 'API REST · JSON · HTTP/HTTPS', 'Authentification · sessions HTTP']
+  },
+  {
+    title: { fr: 'Données, tests & outils', en: 'Data, testing & tools' },
+    items: ['PostgreSQL · MySQL · SQL', 'Modélisation relationnelle', 'Postman · tests Backend et API', 'Git · GitHub · Docker', 'Windows · Ubuntu Linux']
+  },
+  {
+    title: { fr: 'Full-Stack & intégration', en: 'Full-Stack & integration' },
+    items: ['React · Vite', 'JavaScript · TypeScript', 'HTML/CSS · Tailwind · Bootstrap', 'SMTP · emails transactionnels', 'API externes · SMS Orange']
+  }
 ];
 
 export function SkillsGrid({ locale }: { locale: Locale }) {
-  return <div className="skills-grid">{groups.map((group) => <section key={group.title}><p className="eyebrow">{group.title}</p><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul><p className="skills-grid__proof">{locale === 'fr' ? 'Utilisé dans les projets présentés.' : 'Used in the featured projects.'}</p></section>)}</div>;
+  return <div className="skills-grid">{groups.map((group) => <section key={group.title.en}><p className="eyebrow">{group.title[locale]}</p><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul><p className="skills-grid__proof">{locale === 'fr' ? 'Compétences issues du CV et contextualisées dans les projets présentés.' : 'Skills from the résumé and contextualised through the featured projects.'}</p></section>)}</div>;
 }
 

@@ -1,4 +1,4 @@
-export type ProjectSlug = 'react-localstorage' | 'lalana' | 'volatech' | 'zina-tsara-volo' | 'mada-bmp';
+export type ProjectSlug = 'lalana' | 'volatech' | 'zina-tsara-volo' | 'mada-bmp';
 export type EvidenceStatus = 'documented' | 'demo-simulated' | 'live-verified' | 'in-progress';
 export type MediaEvidenceType = 'SCREENSHOT_REAL' | 'ILLUSTRATION_ORIGINAL' | 'ILLUSTRATION_AI' | 'THIRD_PARTY';
 
@@ -17,7 +17,6 @@ export interface ProjectEvidenceAsset extends CoverAsset {
 
 export interface ProjectResources {
   pdf: string;
-  pptx: string;
 }
 
 export interface ProjectSummary {
@@ -38,25 +37,6 @@ const portfolioAsset = (path: string) => `${import.meta.env.BASE_URL}${path.repl
 
 const projectEntries: ProjectSummary[] = [
   {
-    slug: 'react-localstorage',
-    title: { fr: 'React localStorage', en: 'React localStorage' },
-    kind: { fr: 'Projet Frontend', en: 'Frontend project' },
-    summary: {
-      fr: 'Application React locale documentée autour de la persistance navigateur.',
-      en: 'A documented local React application centred on browser persistence.'
-    },
-    technologies: ['React', 'JavaScript', 'localStorage'],
-    proofStatus: 'documented',
-    demoVerified: false,
-    demoUrl: null,
-    cover: {
-      src: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=80',
-      alt: { fr: 'Illustration conceptuelle d’une interface React avec état local', en: 'Conceptual illustration of a React interface with local state' },
-      type: 'THIRD_PARTY',
-      provenance: 'Unsplash CDN — illustration conceptuelle, non capture du projet; licence à vérifier avant publication.'
-    }
-  },
-  {
     slug: 'lalana',
     title: { fr: 'Lalana — Nosy Be Travel Agency', en: 'Lalana — Nosy Be Travel Agency' },
     kind: { fr: 'Projet académique Java', en: 'Academic Java project' },
@@ -75,7 +55,7 @@ const projectEntries: ProjectSummary[] = [
         en: 'Desktop home page of Lalana — Nosy Be Travel Agency'
       },
       type: 'SCREENSHOT_REAL',
-      provenance: 'Capture locale fournie et autorisée par le propriétaire le 2026-10-28.'
+      provenance: 'Capture authentique extraite de Lalana_Etude_de_Cas_Technique_MAJ_SiGNEE.pdf, page 5, le 2026-10-29.'
     },
     evidence: [
       {
@@ -110,8 +90,7 @@ const projectEntries: ProjectSummary[] = [
       }
     ],
     resources: {
-      pdf: portfolioAsset('documents/projects/lalana/Lalana_Etude_de_Cas_Publique_FINAL_SIGNEE.pdf'),
-      pptx: portfolioAsset('documents/projects/lalana/Lalana_Etude_de_Cas_Publique_FINAL_SIGNEE.pptx')
+      pdf: portfolioAsset('documents/projects/lalana/lalana-etude-de-cas.pdf')
     }
   },
   {
@@ -171,8 +150,7 @@ const projectEntries: ProjectSummary[] = [
       }
     ],
     resources: {
-      pdf: portfolioAsset('documents/projects/volatech/VolaTech_Etude_de_Cas_Publique_FINAL_SIGNEE.pdf'),
-      pptx: portfolioAsset('documents/projects/volatech/VolaTech_Etude_de_Cas_Publique_FINAL_SIGNEE.pptx')
+      pdf: portfolioAsset('documents/projects/volatech/volatech-etude-de-cas.pdf')
     }
   },
   {
@@ -232,32 +210,34 @@ const projectEntries: ProjectSummary[] = [
       }
     ],
     resources: {
-      pdf: portfolioAsset('documents/projects/zina/ZINA_Etude_de_Cas_Publique_FINAL_SIGNEE.pdf'),
-      pptx: portfolioAsset('documents/projects/zina/ZINA_Etude_de_Cas_Publique_FINAL_SIGNEE.pptx')
+      pdf: portfolioAsset('documents/projects/zina/zina-etude-de-cas.pdf')
     }
   },
   {
     slug: 'mada-bmp',
     title: { fr: 'Mada-BMP', en: 'Mada-BMP' },
-    kind: { fr: 'Projet Full-Stack', en: 'Full-Stack project' },
+    kind: { fr: 'Projet académique Master 1 · en cours', en: 'Master 1 academic project · in progress' },
     summary: {
-      fr: 'Plateforme de gestion pour indépendants et petites structures, indépendante de ce portfolio.',
-      en: 'A management platform for independent professionals and small organisations, separate from this portfolio.'
+      fr: 'Projet académique de Master 1 en cours : plateforme de gestion pour indépendants et petites structures, distincte de ce portfolio.',
+      en: 'An ongoing Master 1 academic project: a management platform for independent professionals and small organisations, separate from this portfolio.'
     },
-    technologies: ['React', 'Spring Boot', 'PostgreSQL'],
+    technologies: ['React', 'Vite', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
     proofStatus: 'in-progress',
     demoVerified: false,
     demoUrl: null,
     cover: {
-      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-      alt: { fr: 'Illustration conceptuelle d’un flux de gestion pour une application full-stack', en: 'Conceptual illustration of a management flow for a full-stack application' },
-      type: 'THIRD_PARTY',
-      provenance: 'Unsplash CDN — illustration conceptuelle, pas une preuve de production; licence à vérifier avant publication.'
+      src: portfolioAsset('media/projects/mada-bmp/01-accueil-mada-bmp.png'),
+      alt: { fr: 'Page d’accueil sombre de Mada-BMP avec ordinateur et smartphone présentant les interfaces de gestion', en: 'Dark Mada-BMP home page with a laptop and smartphone presenting the management interfaces' },
+      type: 'SCREENSHOT_REAL',
+      provenance: 'Capture authentique extraite de Mada-BMP_Etude_de_Cas_Technique_Projet_Master1_En_Cours.pdf, page 3, le 2026-10-29.'
+    },
+    resources: {
+      pdf: portfolioAsset('documents/projects/mada-bmp/mada-bmp-etude-de-cas.pdf')
     }
   }
 ];
 
-const projectPriority: ProjectSlug[] = ['mada-bmp', 'zina-tsara-volo', 'lalana', 'volatech', 'react-localstorage'];
+const projectPriority: ProjectSlug[] = ['mada-bmp', 'lalana', 'volatech', 'zina-tsara-volo'];
 
 export const projects = [...projectEntries].sort(
   (left, right) => projectPriority.indexOf(left.slug) - projectPriority.indexOf(right.slug),

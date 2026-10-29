@@ -24,11 +24,11 @@
   },
   "home": {
     "casesTitle": "Projets sélectionnés",
-    "casesLead": "Quatre réalisations qui présentent mon travail en React, Spring Boot, PostgreSQL et conception d’interfaces.",
+    "casesLead": "Quatre réalisations qui présentent mon travail en Java, Spring Boot, Jakarta EE, React et PostgreSQL.",
     "journeyTitle": "Parcours professionnel",
     "journeyLead": "Développement web depuis 2024, stage full-stack chez ZINA en 2025 et conception de Mada-BMP en 2026.",
     "contactTitle": "Un profil à découvrir en entretien",
-    "contactLead": "Je recherche une opportunité de développeur Web Full-Stack où contribuer sur React, Java/Spring Boot et PostgreSQL.",
+    "contactLead": "Je recherche une opportunité de développeur Java junior / Full-Stack où contribuer sur Java, Spring Boot, React et PostgreSQL.",
     "caseLink": "Lire l'étude de cas",
     "madaLink": "Découvrir Mada-BMP"
   },

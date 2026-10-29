@@ -2,6 +2,7 @@ import { Navigate } from 'react-router-dom';
 import { CaseStudySections } from '../components/projects/CaseStudySections';
 import { MetaTags } from '../components/seo/MetaTags';
 import { ProjectMeta } from '../components/projects/ProjectMeta';
+import { ProjectResources } from '../components/projects/ProjectResources';
 import { ProofStatus } from '../components/projects/ProofStatus';
 import { caseStudiesEn } from '../content/caseStudies.en';
 import { caseStudiesFr } from '../content/caseStudies.fr';
@@ -25,6 +26,7 @@ export function MadaBMPPage({ locale }: { locale: Locale }) {
         <ProofStatus status={project.proofStatus} locale={locale} />
         <ProjectMeta project={project} />
       </div>
+      <ProjectResources resources={project.resources} locale={locale} />
       <CaseStudySections content={content} locale={locale} />
     </article>
   );

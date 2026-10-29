@@ -2,13 +2,12 @@ import { describe, expect, it } from 'vitest';
 import { projects } from '../content/projectIndex';
 
 describe('public project catalogue', () => {
-  it('contains the four documented case studies and Mada-BMP', () => {
+  it('contains only the four documented Java and Full-Stack case studies', () => {
     expect(projects.map((project) => project.slug)).toEqual([
       'mada-bmp',
-      'zina-tsara-volo',
       'lalana',
       'volatech',
-      'react-localstorage',
+      'zina-tsara-volo',
     ]);
     expect(projects.some((project) => /natur|certification/i.test(project.title.fr))).toBe(false);
   });

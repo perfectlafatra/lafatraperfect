@@ -104,8 +104,8 @@ describe('Lalana recruiter case study', () => {
     expect(region).toContainElement(screen.getByRole('img', { name: /overview board of Lalana/i }));
   });
 
-  it('does not add a visual evidence gallery when a project has no authorised screenshots', () => {
-    renderPath('/fr/projets/react-localstorage');
+  it('does not add a visual evidence gallery when a project only publishes a primary cover', () => {
+    renderPath('/fr/projets/mada-bmp');
 
     expect(screen.queryByRole('region', { name: /interfaces documentées/i })).not.toBeInTheDocument();
   });

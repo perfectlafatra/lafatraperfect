@@ -12,26 +12,6 @@ export interface CaseStudyContent {
 }
 
 export const caseStudiesFr: Record<string, CaseStudyContent> = {
-  'react-localstorage': {
-    context:
-      'Un besoin interne de prototypage rapide : manipuler des listes et préférences côté navigateur, sans backend disponible au départ.',
-    objectives:
-      'Proposer une interface simple, conserver les données utiles entre deux sessions et rendre les comportements de persistance faciles à vérifier.',
-    role:
-      'Construire une application React locale qui persiste l’état entre les sessions et documenter les choix de conception.',
-    architecture:
-      'Application React exécutée dans le navigateur, organisée en composants et services locaux, sans serveur ni base de données distante.',
-    features:
-      'Création, modification et suppression d’éléments, préférences d’interface et restauration de l’état depuis le stockage du navigateur.',
-    implementation:
-      'Découpage en composants lisibles, sérialisation contrôlée via localStorage, gestion des cas de JSON invalide ou absent, relecture croisée du code.',
-    outcomes:
-      'Une application locale fonctionnelle et un dossier documentaire qui relie les décisions d’interface aux comportements observés.',
-    publishedScope:
-      'Application conçue pour un usage local : le code et la documentation constituent le livrable, sans déploiement public.',
-    technicalDecisions:
-      'Validation du JSON au chargement, état par défaut prévisible et gestion explicite des erreurs de quota ou de format.'
-  },
   lalana: {
     context:
       'Projet académique réalisé en 2025, Lalana est une application web de réservation touristique pensée pour présenter l’offre de Nosy Be et organiser des parcours distincts pour les visiteurs, les clients et les profils de gestion.',

@@ -6,20 +6,18 @@ export function ProjectResources({ resources, locale }: { resources?: ProjectRes
 
   const copy = locale === 'fr'
     ? {
-        eyebrow: 'Dossier public signé',
-        title: 'Consulter les preuves du projet',
-        lead: 'L’étude complète documente le contexte, l’architecture, les interfaces et les limites vérifiées.',
-        viewPdf: 'Consulter le PDF',
-        downloadPdf: 'Télécharger le PDF',
-        downloadPptx: 'Télécharger le PowerPoint (.pptx)'
+        eyebrow: 'Étude de cas technique',
+        title: 'Explorer la réalisation',
+        lead: 'Découvrez le contexte, les objectifs, l’architecture, les interfaces, les choix techniques et les limites documentées du projet.',
+        viewPdf: 'Consulter l’étude de cas PDF',
+        newTab: ' (s’ouvre dans un nouvel onglet)'
       }
     : {
-        eyebrow: 'Signed public record',
-        title: 'Review the project evidence',
-        lead: 'The complete study documents the context, architecture, interfaces and verified limitations.',
-        viewPdf: 'View the PDF',
-        downloadPdf: 'Download the PDF',
-        downloadPptx: 'Download the PowerPoint (.pptx)'
+        eyebrow: 'Technical case study',
+        title: 'Explore the project',
+        lead: 'Discover the context, objectives, architecture, interfaces, technical choices and documented limitations of the project.',
+        viewPdf: 'View technical case study (PDF)',
+        newTab: ' (opens in a new tab)'
       };
 
   return (
@@ -29,13 +27,7 @@ export function ProjectResources({ resources, locale }: { resources?: ProjectRes
       <p>{copy.lead}</p>
       <div className="button-row project-resources__actions">
         <a className="button button--primary" href={resources.pdf} target="_blank" rel="noopener noreferrer">
-          {copy.viewPdf}
-        </a>
-        <a className="button button--secondary" href={resources.pdf} download>
-          {copy.downloadPdf}
-        </a>
-        <a className="button button--secondary" href={resources.pptx} download>
-          {copy.downloadPptx}
+          {copy.viewPdf}<span className="sr-only">{copy.newTab}</span>
         </a>
       </div>
     </section>

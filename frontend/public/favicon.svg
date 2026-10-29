@@ -9,10 +9,9 @@
       <stop offset="1" stop-color="#4ec9dd"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
-  <!-- Monogramme LF : barre + accent lumineux, évoquant architecture et code -->
-  <path d="M15 14h7v28h14v8H15V14z" fill="url(#glyph)"/>
-  <path d="M38 14h7v10h4v8h-4v18h-7V14z" fill="url(#glyph)"/>
-  <circle cx="47" cy="18" r="2.5" fill="#4ec9dd"/>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+  <!-- Monogramme LF centré avec une marge de sécurité pour les rendus 16 × 16 et 32 × 32. -->
+  <path d="M17 16h7v25h10v7H17V16z" fill="url(#glyph)"/>
+  <path d="M36 16h16v7h-9v6h8v7h-8v12h-7V16z" fill="url(#glyph)"/>
 </svg>
 

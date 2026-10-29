@@ -8,8 +8,8 @@ if (!origin || !/^https:\/\//.test(origin)) {
 const routes = [
   '/fr', '/fr/a-propos', '/fr/parcours', '/fr/competences', '/fr/projets', '/fr/contact', '/fr/mentions-legales', '/fr/confidentialite',
   '/en', '/en/about', '/en/journey', '/en/skills', '/en/projects', '/en/contact', '/en/legal', '/en/privacy',
-  '/fr/projets/react-localstorage', '/fr/projets/lalana', '/fr/projets/volatech', '/fr/projets/zina-tsara-volo', '/fr/projets/mada-bmp',
-  '/en/projects/react-localstorage', '/en/projects/lalana', '/en/projects/volatech', '/en/projects/zina-tsara-volo', '/en/projects/mada-bmp'
+  '/fr/projets/lalana', '/fr/projets/volatech', '/fr/projets/zina-tsara-volo', '/fr/projets/mada-bmp',
+  '/en/projects/lalana', '/en/projects/volatech', '/en/projects/zina-tsara-volo', '/en/projects/mada-bmp'
 ];
 const body = routes.map((route) => `  <url><loc>${origin}${route}</loc></url>`).join('\n');
 await writeFile(new URL('../public/sitemap.xml', import.meta.url), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`);

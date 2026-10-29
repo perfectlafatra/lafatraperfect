@@ -14,12 +14,11 @@ export const routes = [
   'fr/a-propos', 'en/about', 'fr/parcours', 'en/journey', 'fr/competences', 'en/skills',
   'fr/projets', 'en/projects',
   'fr/contact', 'en/contact', 'fr/mentions-legales', 'en/legal', 'fr/confidentialite', 'en/privacy',
-  'fr/projets/react-localstorage', 'fr/projets/lalana', 'fr/projets/volatech', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
-  'en/projects/react-localstorage', 'en/projects/lalana', 'en/projects/volatech', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
+  'fr/projets/lalana', 'fr/projets/volatech', 'fr/projets/zina-tsara-volo', 'fr/projets/mada-bmp',
+  'en/projects/lalana', 'en/projects/volatech', 'en/projects/zina-tsara-volo', 'en/projects/mada-bmp'
 ];
 
 const projectTitles = {
-  'react-localstorage': ['React localStorage', 'React localStorage'],
   lalana: ['Lalana — étude de cas', 'Lalana — case study'],
   volatech: ['VolaTech — vente et retrait de produits', 'VolaTech — product sales and pickup'],
   'zina-tsara-volo': ['ZINA by Tsara Volo — étude de cas', 'ZINA by Tsara Volo — case study'],

@@ -26,6 +26,7 @@ describe('recruiter-first portfolio contract', () => {
     expect(screen.getByRole('heading', { level: 1, name: /développeur java.*full-stack/i })).toBeInTheDocument();
     expect(screen.getAllByText('Java · Spring Boot · React · PostgreSQL').length).toBeGreaterThan(0);
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).toHaveTextContent('Projets');
+    expect(screen.getByRole('navigation', { name: /navigation principale/i })).toHaveTextContent('Accueil');
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).not.toHaveTextContent(/Journal|Méthode/i);
     expect(screen.queryByRole('heading', { name: /journal technique/i })).not.toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /une méthode/i })).not.toBeInTheDocument();
@@ -34,7 +35,7 @@ describe('recruiter-first portfolio contract', () => {
   });
 
   it('presents flagship projects first', () => {
-    expect(projects.slice(0, 2).map((project) => project.slug)).toEqual(['mada-bmp', 'zina-tsara-volo']);
+    expect(projects.map((project) => project.slug)).toEqual(['mada-bmp', 'lalana', 'volatech', 'zina-tsara-volo']);
   });
 
   it('uses recruiter-readable case-study labels instead of STAR lessons', () => {
