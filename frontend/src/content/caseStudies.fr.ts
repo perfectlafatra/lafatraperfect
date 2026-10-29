@@ -54,7 +54,7 @@ export const caseStudiesFr: Record<string, CaseStudyContent> = {
   },
   'zina-tsara-volo': {
     context:
-      'Projet de fin de Licence DA2I réalisé en stage chez ZINA by Tsara Volo en 2025, autour de la digitalisation de la boutique, des services et de la relation client.',
+      'Projet de fin de Licence en Développement d’Applications Internet/Intranet (DA2I), réalisé en stage chez ZINA by Tsara Volo en 2025, autour de la digitalisation de la boutique, des services et de la relation client.',
     objectives:
       'Articuler quatre domaines dans une même expérience : commerce, services et rendez-vous, relation client et pilotage interne, avec des parcours Public, Client et ADMIN.',
     role:

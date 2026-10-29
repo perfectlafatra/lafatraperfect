@@ -43,7 +43,7 @@ export const caseStudiesEn: Record<string, CaseStudyContent> = {
   },
   'zina-tsara-volo': {
     context:
-      'A final Licence DA2I project completed during a 2025 internship at ZINA by Tsara Volo, focused on digitising the shop, services and customer relationship.',
+      'A final Licence project in Internet/Intranet Applications Development (DA2I), completed during a 2025 internship at ZINA by Tsara Volo and focused on digitising the shop, services and customer relationship.',
     objectives:
       'Connect four domains in one experience: commerce, services and appointments, customer relationship and internal operations, with Public, Customer and ADMIN journeys.',
     role:

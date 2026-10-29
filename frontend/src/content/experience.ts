@@ -37,7 +37,7 @@ export const experience = [
   },
   {
     key: 'master',
-    title: { fr: 'Master 1 — Modélisation et Ingénierie Informatique', en: 'Master 1 — Modelling and Computer Engineering' },
+    title: { fr: 'Master 1 — Modélisation et Ingénierie Informatique (M2I)', en: 'Master 1 — Modeling and Computer Engineering (M2I)' },
     description: {
       fr: 'Formation Bac+4 en cours à l’EMIT — Université de Fianarantsoa, orientée modélisation et architecture logicielle.',
       en: 'Ongoing Bac+4 programme at EMIT — University of Fianarantsoa, focused on modelling and software architecture.'
@@ -46,10 +46,10 @@ export const experience = [
   },
   {
     key: 'licence',
-    title: { fr: 'Licence — Développement d’Applications Internet/Intranet', en: 'Licence — Internet/Intranet Application Development' },
+    title: { fr: 'Licence — Développement d’Applications Internet/Intranet (DA2I)', en: 'Licence — Internet/Intranet Applications Development (DA2I)' },
     description: {
-      fr: 'Licence DA2I obtenue à l’EMIT — Université de Fianarantsoa : bases de données relationnelles, algorithmique, développement web et programmation réseau.',
-      en: 'DA2I Licence completed at EMIT — University of Fianarantsoa: relational databases, algorithms, web development and network programming.'
+      fr: 'Licence en Développement d’Applications Internet/Intranet (DA2I) obtenue à l’EMIT — Université de Fianarantsoa : bases de données relationnelles, algorithmique, développement web et programmation réseau.',
+      en: 'Licence in Internet/Intranet Applications Development (DA2I) completed at EMIT — University of Fianarantsoa: relational databases, algorithms, web development and network programming.'
     },
     date: { fr: '2022 → 2025', en: '2022 → 2025' }
   }

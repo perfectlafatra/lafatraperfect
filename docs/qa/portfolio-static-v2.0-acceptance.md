@@ -87,7 +87,7 @@ Le bundle public `assets/index-dt0j5CMH.js` contient les nouveaux marqueurs édi
 
 | contrôle | statut | preuve |
 |---|---|---|
-| Identité candidat | `PASS` | nom complet, positionnement Java junior / Full-Stack, Master 1 M2I et stack principale visibles dans le hero |
+| Identité candidat | `PASS` | nom complet, positionnement Java junior / Full-Stack, Master 1 Modélisation et Ingénierie Informatique (M2I) et stack principale visibles dans le hero |
 | Dossiers Lalana, VolaTech, ZINA | `PASS` | PDF consultables/téléchargeables et PPTX téléchargeables, fichiers et SHA-256 inventoriés |
 | Confidentialité Mada-BMP | `PASS` | aucun manuel ou support interne Mada-BMP sous `frontend/public` |
 | UI/UX | `PASS` | hero statique, grille éditoriale existante conservée, actions 44 px, focus et responsive maintenus |
@@ -124,7 +124,7 @@ Le bundle public `assets/index-Ota7VZET.js` contient les coordonnées exactes et
 | Mouvement accessible | `PASS` | repli frontal statique avec `prefers-reduced-motion` ou sans `IntersectionObserver`, aucun canvas WebGL chargé |
 | Ciblage Java/Web/Data | `PASS` | hero et compétences mettent en avant Java, Spring Boot, HTTP/REST, PostgreSQL/MySQL/SQL, analyse technique, débogage, Windows/Linux et documentation FR/EN |
 | Honnêteté ValueIT | `PARTIAL` | adéquation renforcée sur Java, Web, SQL, analyse et environnements ; aucune expérience de crawler à grande échelle, disponibilité 10 h–19 h ou probabilité d’embauche inventée |
-| Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 46 tests, TypeScript strict, build JS 273,50 kB (gzip 87,88 kB), liens, contrat public et 24 routes + 404 |
+| Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 47 tests, TypeScript strict, build JS 274,01 kB (gzip 87,95 kB), liens, contrat public et 24 routes + 404 |
 | Contrôle visuel | `PASS` | hero et contact contrôlés localement à 1440 px ; mise en page étroite contrôlée à 500 px, règles fluides actives sous 520 px |
 | Commits et push | `PASS` | `e11200d` (rotation, contacts, ciblage) et `4f56397` (WebP) poussés normalement sur `origin/master` |
 | GitHub Actions Pages | `PASS` | runs `40906317045` et `40910129084` terminés avec succès |
