@@ -3,7 +3,7 @@ import type { Locale } from '../../routes/publicRoutes';
 const groups = [
   {
     title: { fr: 'Java & Backend', en: 'Java & Backend' },
-    items: ['Java · POO', 'Spring Boot · MVC · Security', 'Jakarta EE · Servlets · JSP · JDBC', 'API REST · JSON · HTTP/HTTPS', 'Authentification · sessions HTTP']
+    items: ['Java · POO', 'Spring Boot · MVC · Security', 'Jakarta EE · Servlets · JSP · JDBC', 'API REST · JSON · HTTP/HTTPS', 'Analyse technique · débogage · résolution de problèmes']
   },
   {
     title: { fr: 'Données, tests & outils', en: 'Data, testing & tools' },
@@ -11,7 +11,7 @@ const groups = [
   },
   {
     title: { fr: 'Full-Stack & intégration', en: 'Full-Stack & integration' },
-    items: ['React · Vite', 'JavaScript · TypeScript', 'HTML/CSS · Tailwind · Bootstrap', 'SMTP · emails transactionnels', 'API externes · SMS Orange']
+    items: ['React · Vite', 'JavaScript · TypeScript', 'HTML/CSS · Tailwind · Bootstrap', 'Contrats client/serveur · intégration API', 'Documentation technique FR/EN · anglais technique']
   }
 ];
 

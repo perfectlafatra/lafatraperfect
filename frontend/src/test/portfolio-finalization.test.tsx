@@ -70,7 +70,9 @@ describe('urgent recruiter portfolio contract', () => {
   it('matches the public contact details from the current CV', () => {
     expect(siteConfig.emailUrl).toBe('mailto:lafatraperfect@gmail.com');
     expect(siteConfig.phonePrimary).toBe('+261 32 93 777 81');
-    expect(siteConfig.phoneSecondary).toBe('+261 32 60 463 49');
+    expect(siteConfig.phoneSecondary).toBe('+261 34 48 109 24');
+    expect(siteConfig.phoneSecondaryUrl).toBe('tel:+261344810924');
+    expect(siteConfig.whatsAppPhone).toBe('+261 32 60 463 49');
     expect(siteConfig.whatsAppUrl).toBe('https://wa.me/261326046349');
     expect(siteConfig.address).toBe('Lot IAN 64, Marobiby Itaosy, Antananarivo, Madagascar');
 
@@ -78,15 +80,18 @@ describe('urgent recruiter portfolio contract', () => {
     expect(screen.getByRole('link', { name: /lafatraperfect@gmail\.com/i })).toHaveAttribute('href', siteConfig.emailUrl);
     expect(screen.getByText(siteConfig.address)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /\+261 32 93 777 81/ })).toHaveAttribute('href', 'tel:+261329377781');
+    expect(screen.getByRole('link', { name: /\+261 34 48 109 24/ })).toHaveAttribute('href', 'tel:+261344810924');
     expect(screen.getByRole('link', { name: /whatsapp.*\+261 32 60 463 49/i })).toHaveAttribute('href', siteConfig.whatsAppUrl);
   });
 
-  it('presents the candidate identity without loading a 3D hero canvas', () => {
+  it('presents the candidate identity with the original portrait rotation and no 3D canvas', () => {
     renderPath('/fr');
     expect(screen.getAllByText(/RANDRIAMANANTENA Fitahiana Lafatra/i).length).toBeGreaterThanOrEqual(2);
     expect(screen.getByRole('link', { name: 'RANDRIAMANANTENA Fitahiana Lafatra' })).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toHaveTextContent('RANDRIAMANANTENA Fitahiana Lafatra');
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/développeur java|full-stack/i);
+    expect(screen.getByRole('img', { name: /portrait du développeur en rotation/i })).toBeInTheDocument();
+    expect(document.querySelector('.hero-turntable')).toBeInTheDocument();
     expect(document.querySelector('canvas')).not.toBeInTheDocument();
   });
 });

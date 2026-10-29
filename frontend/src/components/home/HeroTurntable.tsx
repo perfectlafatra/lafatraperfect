@@ -101,6 +101,9 @@ export default function HeroTurntable({ locale = 'fr', className = '' }: HeroTur
     const base = baseRef.current;
     const overlay = overlayRef.current;
     if (!root || !stage || !base || !overlay || reducedMotion || frames.length < 2) return;
+    // The poster remains a complete static fallback in test environments and
+    // older browsers that do not expose viewport observation.
+    if (typeof IntersectionObserver === 'undefined') return;
 
     const cache = new Map<number, HTMLImageElement>();
     const loading = new Set<number>();
@@ -230,7 +233,7 @@ export default function HeroTurntable({ locale = 'fr', className = '' }: HeroTur
 
   return (
     <div ref={rootRef} className={`hero-3d hero-3d--image hero-turntable ${className}`.trim()} role="img" aria-label={alt}>
-      <img className="hero-turntable__poster" src={portraitSequence.fallback} alt="" aria-hidden="true" decoding="async" draggable={false} fetchPriority="high" />
+      <img className="hero-turntable__poster" src={portraitSequence.fallback} alt="" aria-hidden="true" decoding="async" draggable={false} />
       {!reducedMotion && frames.length > 1 && (
         <div ref={stageRef} className="hero-turntable__stage" data-ready="false" aria-hidden="true">
           <img ref={baseRef} className="hero-turntable__base" src={frames[0] ?? portraitSequence.fallback} alt="" draggable={false} />

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { routePath, type Locale } from '../../routes/publicRoutes';
 import { DownloadCV } from '../common/DownloadCV';
-import { portraitSequence } from '../../config/portraitSequence';
+import HeroTurntable from './HeroTurntable';
 
 export function Hero({ locale }: { locale: Locale }) {
   const { t } = useTranslation();
@@ -24,9 +24,9 @@ export function Hero({ locale }: { locale: Locale }) {
           <DownloadCV locale={locale} />
         </div>
       </div>
-      <div className="hero__visual hero__visual--static" aria-label={locale === 'fr' ? 'Portrait professionnel' : 'Professional portrait'}>
-        <img src={portraitSequence.fallback} alt="" aria-hidden="true" />
-        <span className="hero__code">Java · Spring Boot · React · PostgreSQL</span>
+      <div className="hero__visual hero__visual--3d">
+        <HeroTurntable locale={locale} />
+        <span className="hero__code">{t('hero.stack')}</span>
       </div>
     </section>
   );

@@ -11,9 +11,9 @@ portraits de poses différentes sont mélangés presque tout le temps. Un crossf
 de 0 à 100 % sur toute la durée entre poses **n'est pas une interpolation de la
 géométrie faciale** et provoque le flou observé.
 
-Cette v3 :
-1. Corrige le ghosting prolongé. Deux vues ne se chevauchent que durant les **7,5 % finaux** d'une transition, soit environ 90 ms pour 8 photos en aller-retour sur 17 secondes.
-2. Utilise toutes les photos `R.png` ... `R7.png` au lieu d'une seule photo flottante.
+Cette v3, mise à jour dans le Portfolio le 29 octobre 2026 :
+1. Corrige le ghosting prolongé. Deux vues ne se chevauchent que durant les **12 % finaux** d'une transition courte.
+2. Utilise cinq angles latéraux cohérents (`R2`, `R3`, `R`, `R1`, `R5`) dans un parcours qui commence face caméra, visite les deux profils et revient au visage frontal. Les poses verticales incompatibles sont conservées dans les sources mais exclues de l'animation.
 3. Emploie un parcours **aller-retour (`pingpong`)** par défaut. Les photographies ne contiennent pas les vues arrière requises pour un 360° fidèle ; on évite le faux raccord `R7 -> R`.
 4. Ne repose pas sur l'augmentation artificielle de `rotateY` d'une image 2D.
 5. Précharge et décode les images, suspend hors viewport/onglet et respecte `prefers-reduced-motion`.
@@ -23,7 +23,7 @@ Cette v3 :
 
 ## Limite essentielle et recommandation
 
-**La v3 ne fabrique pas des images intermédiaires photoréalistes à partir de huit photographies : elles ne sont pas jointes aux archives.** Une rotation très fluide comme une vidéo nécessite de nombreux angles continus. Le crossfade rapide élimine la longue superposition floue, mais avec huit poses il subsiste un mouvement saccadé/étagé. Pour le mouvement demandé :
+**La v3 ne fabrique pas des images intermédiaires photoréalistes à partir des portraits : elles ne sont pas jointes au dépôt.** Une rotation très fluide comme une vidéo nécessite de nombreux angles continus. Le crossfade rapide élimine la longue superposition floue, mais avec cinq angles uniques il subsiste un mouvement volontairement posé. Pour un mouvement encore plus dense :
 
 - **Meilleure solution** : reconstruire un modèle facial 3D crédible avec les références originales, le valider, puis exporter par rendu hors ligne une séquence d'angles continus (`frame_0000.webp`, ...). Utiliser ensuite la séquence d'images dans React ; **pas de vidéo**. Les régions non photographiées restent estimées.
 - **Solution alternative** : prendre de vraies photos de tout le tour de la tête avec éclairage/cadrage constants (y compris l'arrière), ou générer et vérifier des nouvelles vues cohérentes par synthèse 3D.
@@ -73,11 +73,11 @@ Cette archive ne contient PAS : `package.json`, `package-lock.json`, `tsconfig`,
 
 ## Checklist
 
-- [ ] Le build `tsc -b && vite build` passe réellement sur le dépôt.
+- [x] Le build `tsc -b && vite build` passe réellement sur le dépôt (recette du 2026-10-29).
 - [ ] `FeaturedCases.tsx` et `ProofShowcase.tsx` existent dans `src/components/home/`.
-- [ ] `HeroTurntable.tsx` existe et charge ses images sans 404.
-- [ ] L'ordre de `R..R7` a été corrigé d'après les poses véritables.
-- [ ] Le double visage ne persiste plus pendant plusieurs centaines de millisecondes.
-- [ ] Le mouvement réduit affiche un portrait statique.
+- [x] `HeroTurntable.tsx` existe et les portraits publics sont présents.
+- [x] L'ordre latéral a été corrigé d'après les poses véritables.
+- [x] Le fondu reste limité à la fin de chaque changement d'angle.
+- [x] Le mouvement réduit affiche le portrait frontal statique.
 - [ ] Les différents navigateurs mobiles sont testés.
 - [ ] La séquence d'interpolation faciale dense est réellement produite avant d'annoncer un mouvement « comme une vidéo ».

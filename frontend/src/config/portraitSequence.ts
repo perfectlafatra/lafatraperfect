@@ -25,14 +25,16 @@ export interface PortraitSequenceConfig {
 const base = `${import.meta.env.BASE_URL}media/hero/portraits/`;
 
 export const portraitSequence: PortraitSequenceConfig = {
-  // INITIAL INVENTORY ONLY. Reorder after inspecting all original photographs.
-  frames: ['R.png', 'R1.png', 'R2.png', 'R3.png', 'R4.png', 'R5.png', 'R6.png', 'R7.png']
+  // Verified lateral path from the original portrait set. It starts face-on,
+  // visits both profiles and returns through the same authentic angles. Images
+  // with a different vertical head pose are excluded to avoid visible jumps.
+  frames: ['R.png', 'R1.png', 'R5.png', 'R1.png', 'R.png', 'R3.png', 'R2.png']
     .map((name) => `${base}${name}`),
-  cycleSeconds: 17,
+  cycleSeconds: 18,
   loopMode: 'pingpong',
-  // Prevent long double-exposure of different heads (previous bug).
-  transitionFraction: 0.075,
-  scrollCycles: 0.12,
+  // A short blend softens each angle change without creating a double face.
+  transitionFraction: 0.12,
+  scrollCycles: 0.05,
   fallback: `${base}R.png`,
   // Once the validated dense sequence exists, enable:
   // manifestUrl: '/media/hero/turntable/manifest.json',

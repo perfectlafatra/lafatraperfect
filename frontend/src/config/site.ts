@@ -10,8 +10,9 @@ export const siteConfig = {
   address: 'Lot IAN 64, Marobiby Itaosy, Antananarivo, Madagascar',
   phonePrimary: '+261 32 93 777 81',
   phonePrimaryUrl: 'tel:+261329377781',
-  phoneSecondary: '+261 32 60 463 49',
-  phoneSecondaryUrl: 'tel:+261326046349',
+  phoneSecondary: '+261 34 48 109 24',
+  phoneSecondaryUrl: 'tel:+261344810924',
+  whatsAppPhone: '+261 32 60 463 49',
   whatsAppUrl: 'https://wa.me/261326046349',
   madaBmpUrl: null as string | null
 } as const;

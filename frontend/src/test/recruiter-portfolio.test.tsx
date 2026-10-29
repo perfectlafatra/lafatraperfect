@@ -24,7 +24,10 @@ describe('recruiter-first portfolio contract', () => {
     renderPath('/fr');
 
     expect(screen.getByRole('heading', { level: 1, name: /développeur java.*full-stack/i })).toBeInTheDocument();
-    expect(screen.getAllByText('Java · Spring Boot · React · PostgreSQL').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Java · Spring Boot · HTTP/REST · PostgreSQL').length).toBeGreaterThan(0);
+    expect(screen.getByText('Analyse technique · débogage · résolution de problèmes')).toBeInTheDocument();
+    expect(screen.getByText('Windows · Ubuntu Linux')).toBeInTheDocument();
+    expect(screen.getByText('Documentation technique FR/EN · anglais technique')).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).toHaveTextContent('Projets');
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).toHaveTextContent('Accueil');
     expect(screen.getByRole('navigation', { name: /navigation principale/i })).not.toHaveTextContent(/Journal|Méthode/i);
