@@ -27,7 +27,7 @@ npm run verify
 
 - Le profil, le parcours et les études de cas FR/EN sont versionnés dans `frontend/src/content/`.
 - La navigation publique est centrée sur le recrutement : projets, parcours, compétences, profil, CV et contact. Les anciennes pages Journal/Méthode ne font plus partie du site publié.
-- Le contact direct et le CV sont configurés dans `frontend/src/config/site.ts` ; le CV public est `frontend/public/cv/lafatraramanantena-cv.pdf`.
+- Le contact direct et les CV localisés sont configurés dans `frontend/src/config/site.ts` ; les versions publiques française et anglaise se trouvent dans `frontend/public/cv/`.
 - Le workflow `.github/workflows/deploy.yml` construit uniquement `frontend/dist` et déploie GitHub Pages. Il calcule `VITE_BASE_PATH` à partir du dépôt réel ; aucun nom de compte n’est supposé.
 - Le remote public est `https://github.com/perfectlafatra/lafatraperfect.git` et la vitrine est publiée via GitHub Actions à `https://perfectlafatra.github.io/lafatraperfect/fr`.
 

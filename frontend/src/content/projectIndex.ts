@@ -16,7 +16,7 @@ export interface ProjectEvidenceAsset extends CoverAsset {
 }
 
 export interface ProjectResources {
-  pdf: string;
+  pdf: { fr: string; en: string };
 }
 
 export interface ProjectSummary {
@@ -90,7 +90,10 @@ const projectEntries: ProjectSummary[] = [
       }
     ],
     resources: {
-      pdf: portfolioAsset('documents/projects/lalana/lalana-etude-de-cas.pdf')
+      pdf: {
+        fr: portfolioAsset('documents/projects/lalana/lalana-etude-de-cas.pdf'),
+        en: portfolioAsset('documents/projects/lalana/lalana-case-study-en.pdf')
+      }
     }
   },
   {
@@ -150,7 +153,10 @@ const projectEntries: ProjectSummary[] = [
       }
     ],
     resources: {
-      pdf: portfolioAsset('documents/projects/volatech/volatech-etude-de-cas.pdf')
+      pdf: {
+        fr: portfolioAsset('documents/projects/volatech/volatech-etude-de-cas.pdf'),
+        en: portfolioAsset('documents/projects/volatech/volatech-case-study-en.pdf')
+      }
     }
   },
   {
@@ -210,7 +216,10 @@ const projectEntries: ProjectSummary[] = [
       }
     ],
     resources: {
-      pdf: portfolioAsset('documents/projects/zina/zina-etude-de-cas.pdf')
+      pdf: {
+        fr: portfolioAsset('documents/projects/zina/zina-etude-de-cas.pdf'),
+        en: portfolioAsset('documents/projects/zina/zina-case-study-en.pdf')
+      }
     }
   },
   {
@@ -232,7 +241,10 @@ const projectEntries: ProjectSummary[] = [
       provenance: 'Capture authentique extraite de Mada-BMP_Etude_de_Cas_Technique_Projet_Master1_En_Cours.pdf, page 3, le 2026-10-29.'
     },
     resources: {
-      pdf: portfolioAsset('documents/projects/mada-bmp/mada-bmp-etude-de-cas.pdf')
+      pdf: {
+        fr: portfolioAsset('documents/projects/mada-bmp/mada-bmp-etude-de-cas.pdf'),
+        en: portfolioAsset('documents/projects/mada-bmp/mada-bmp-case-study-en.pdf')
+      }
     }
   }
 ];

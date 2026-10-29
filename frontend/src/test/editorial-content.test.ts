@@ -7,7 +7,9 @@ describe('editorial content contract', () => {
   it('publishes a dated experience timeline and recruiter contact assets', () => {
     expect(experience.every((item) => item.date.fr.trim() && item.date.en.trim())).toBe(true);
     expect(siteConfig.emailUrl).toMatch(/^mailto:/);
-    expect(siteConfig.cvUrl).toMatch(/\/cv\//);
+    expect(siteConfig.cvUrl.fr).toMatch(/\/cv\/.*\.pdf$/);
+    expect(siteConfig.cvUrl.en).toMatch(/\/cv\/.*-en\.pdf$/);
+    expect(siteConfig.cvUrl.fr).not.toBe(siteConfig.cvUrl.en);
   });
 
   it('expands the M2I and DA2I degrees in both portfolio languages', () => {

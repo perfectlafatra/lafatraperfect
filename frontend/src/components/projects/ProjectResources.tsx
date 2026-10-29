@@ -26,7 +26,7 @@ export function ProjectResources({ resources, locale }: { resources?: ProjectRes
       <h2 id="project-resources-title">{copy.title}</h2>
       <p>{copy.lead}</p>
       <div className="button-row project-resources__actions">
-        <a className="button button--primary" href={resources.pdf} target="_blank" rel="noopener noreferrer">
+        <a className="button button--primary" href={resources.pdf[locale]} target="_blank" rel="noopener noreferrer">
           {copy.viewPdf}<span className="sr-only">{copy.newTab}</span>
         </a>
       </div>

@@ -4,7 +4,10 @@ export const siteConfig = {
     fr: 'Développeur Java junior | Full-Stack',
     en: 'Junior Java Developer | Full-Stack'
   },
-  cvUrl: `${import.meta.env.BASE_URL}cv/lafatraramanantena-cv.pdf`,
+  cvUrl: {
+    fr: `${import.meta.env.BASE_URL}cv/lafatraramanantena-cv.pdf`,
+    en: `${import.meta.env.BASE_URL}cv/randriamanantena-fitahiana-lafatra-resume-en.pdf`
+  },
   email: 'lafatraperfect@gmail.com',
   emailUrl: 'mailto:lafatraperfect@gmail.com',
   address: 'Lot IAN 64, Marobiby Itaosy, Antananarivo, Madagascar',

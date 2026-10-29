@@ -23,6 +23,7 @@ describe('public application', () => {
     expect(screen.getByRole('heading', { name: /projets sélectionnés/i })).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /lire l'étude de cas/i })).toHaveLength(3);
     expect(screen.getAllByRole('link', { name: /découvrir mada-bmp/i })).toHaveLength(1);
+    expect(screen.getAllByRole('link', { name: /télécharger le cv/i }).every((link) => /lafatraramanantena-cv\.pdf$/.test(link.getAttribute('href') ?? ''))).toBe(true);
   });
 
   it('renders the English home with an English document language', () => {
@@ -32,6 +33,7 @@ describe('public application', () => {
     expect(screen.getByRole('link', { name: /skip to content/i })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: /primary navigation/i })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: /legal navigation/i })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /download cv/i }).every((link) => /randriamanantena-fitahiana-lafatra-resume-en\.pdf$/.test(link.getAttribute('href') ?? ''))).toBe(true);
     expect(document.documentElement.lang).toBe('en');
   });
 

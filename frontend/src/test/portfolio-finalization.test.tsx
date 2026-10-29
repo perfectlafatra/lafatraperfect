@@ -29,16 +29,18 @@ function renderPath(path: string) {
 }
 
 describe('urgent recruiter portfolio contract', () => {
-  it('publishes one distinct final PDF for each of the four projects', () => {
+  it('publishes distinct French and English PDFs for each of the four projects', () => {
     const pdfUrls: string[] = [];
     for (const slug of ['mada-bmp', 'lalana', 'volatech', 'zina-tsara-volo']) {
       const project = projects.find((entry) => entry.slug === slug);
-      expect(project?.resources?.pdf).toMatch(/-etude-de-cas\.pdf$/);
-      expect(existsSync(publicPath(project!.resources!.pdf))).toBe(true);
+      expect(project?.resources?.pdf.fr).toMatch(/-etude-de-cas\.pdf$/);
+      expect(project?.resources?.pdf.en).toMatch(/-case-study-en\.pdf$/);
+      expect(existsSync(publicPath(project!.resources!.pdf.fr))).toBe(true);
+      expect(existsSync(publicPath(project!.resources!.pdf.en))).toBe(true);
       expect(project?.resources).not.toHaveProperty('pptx');
-      pdfUrls.push(project!.resources!.pdf);
+      pdfUrls.push(project!.resources!.pdf.fr, project!.resources!.pdf.en);
     }
-    expect(new Set(pdfUrls).size).toBe(4);
+    expect(new Set(pdfUrls).size).toBe(8);
   });
 
   it('uses an authentic local ZINA cover and evidence from the signed public study', () => {
@@ -63,9 +65,16 @@ describe('urgent recruiter portfolio contract', () => {
   it('renders safe document actions on a project page', () => {
     renderPath('/fr/projets/lalana');
     const link = screen.getByRole('link', { name: /consulter l’étude de cas pdf/i });
+    expect(link).toHaveAttribute('href', expect.stringMatching(/lalana-etude-de-cas\.pdf$/));
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', expect.stringContaining('noopener'));
     expect(screen.queryByRole('link', { name: /powerpoint|télécharger le pdf/i })).not.toBeInTheDocument();
+  });
+
+  it('opens the English project PDF from an English case-study page', () => {
+    renderPath('/en/projects/lalana');
+    const link = screen.getByRole('link', { name: /view technical case study/i });
+    expect(link).toHaveAttribute('href', expect.stringMatching(/lalana-case-study-en\.pdf$/));
   });
 
   it('matches the public contact details from the current CV', () => {
