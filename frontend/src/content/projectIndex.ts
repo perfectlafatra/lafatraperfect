@@ -227,10 +227,10 @@ const projectEntries: ProjectSummary[] = [
     title: { fr: 'Mada-BMP', en: 'Mada-BMP' },
     kind: { fr: 'Projet académique Master 1 · en cours', en: 'Master 1 academic project · in progress' },
     summary: {
-      fr: 'Projet académique de Master 1 en cours : plateforme de gestion pour indépendants et petites structures, distincte de ce portfolio.',
-      en: 'An ongoing Master 1 academic project: a management platform for independent professionals and small organisations, separate from this portfolio.'
+      fr: 'Projet académique de Master 1 en cours : plateforme React/Spring Boot pour indépendants et petites structures, avec un service interne d’analyse Python/FastAPI en cours d’intégration.',
+      en: 'An ongoing Master 1 academic project: a React/Spring Boot platform for independent professionals and small organisations, with an internal Python/FastAPI analysis service being integrated.'
     },
-    technologies: ['React', 'Vite', 'TypeScript', 'Spring Boot', 'PostgreSQL'],
+    technologies: ['React', 'Vite', 'TypeScript', 'Spring Boot', 'PostgreSQL', 'Python', 'FastAPI'],
     proofStatus: 'in-progress',
     demoVerified: false,
     demoUrl: null,

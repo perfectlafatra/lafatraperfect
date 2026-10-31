@@ -63,22 +63,22 @@ export const caseStudiesEn: Record<string, CaseStudyContent> = {
   },
   'mada-bmp': {
     context:
-      'Independent professionals and small organisations manage operations with scattered tools (spreadsheets, notes, messaging) that do not talk to each other.',
+      'Mada-BMP is an ongoing Master 1 academic project addressing independent professionals and small organisations that still manage operations through scattered spreadsheets, notes and messaging tools.',
     objectives:
-      'Unify customer, service, invoice, declared payment and receipt flows in a business application separate from the portfolio.',
+      'Unify customer, service, invoice, declared payment and receipt flows, then support analysis without moving business rules or authorisation outside the Java backend.',
     role:
-      'Design and develop a full-stack management platform covering activity tracking, clients and simple invoicing, with a Java backend and a PostgreSQL database.',
+      'Design and develop the full-stack architecture, React journeys, Spring Boot REST contracts, PostgreSQL model and progressive integration of an internal Python/FastAPI analysis service.',
     architecture:
-      'React frontend, Spring Boot API and PostgreSQL, with REST contracts, versioned migrations and clear business-domain boundaries.',
+      'Target architecture currently being integrated: React → Spring Boot → FastAPI. React/Vite/TypeScript carries the interface; Spring Boot centralises the API, authorisation, workspace isolation and sensitive operations; PostgreSQL stores the data; FastAPI remains an internal analysis service called by Spring Boot.',
     features:
-      'Customer, service, invoice, declared payment, receipt and workspace management within the currently documented scope.',
+      'Customer, service, invoice, declared payment, receipt and workspace management. The decision-support scope targets cash-flow forecasts, budget trends, anomalies, reminder prioritisation and analytical summaries.',
     implementation:
-      'React + Spring Boot + PostgreSQL architecture, structured and validated REST API, versioned migrations, clear frontend/backend responsibility split, technical decision log.',
+      'REST contracts and versioned migrations structure data exchange and persistence. Spring Boot remains the control point for permissions, workspace isolation and sensitive actions; the FastAPI service receives only the data required for the planned analytical processing.',
     outcomes:
-      'A platform distinct from this portfolio, still consolidating, with a documented and testable technical foundation.',
+      'The project has a documented and testable full-stack foundation separate from this portfolio. Analysis-service integration and functional consolidation remain in progress as part of the Master 1 programme.',
     publishedScope:
-      'Currently in development; no public usage metrics are displayed at this stage.',
+      'Project in development: the FastAPI architecture describes an integration target. No trained model, accuracy score, validated predictive result, public deployment or full completion is claimed.',
     technicalDecisions:
-      'Modular architecture, versioned migrations, validated REST contracts and documented client, service, invoice, payment and receipt flows.'
+      'Keeping Spring Boot as the security boundary avoids exposing the analysis service directly. Authorisation, workspaces and sensitive operations remain controlled in Java, while FastAPI is reserved for internal analytical processing.'
   }
 };

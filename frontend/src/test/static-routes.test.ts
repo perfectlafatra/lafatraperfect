@@ -20,7 +20,7 @@ describe('GitHub Pages static routes', () => {
     expect(generator).toContain('en/projects/volatech');
     expect(generator).toContain('en/projects/zina-tsara-volo');
     expect(generator).toContain('RANDRIAMANANTENA Fitahiana Lafatra');
-    expect(generator).toContain('Développeur Java junior');
+    expect(generator).toContain('Développeur Fullstack Junior');
     expect(generator).toContain('VolaTech — vente et retrait de produits');
     expect(generator).not.toContain('VolaTech — boutique Java EE');
     expect(generator).not.toContain('react-localstorage');

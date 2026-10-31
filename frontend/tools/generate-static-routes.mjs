@@ -35,11 +35,11 @@ function metadataFor(route) {
   const title = projectSlug
     ? projectTitles[projectSlug]?.[english ? 1 : 0] ?? 'RANDRIAMANANTENA Fitahiana Lafatra — Portfolio'
     : english
-      ? 'RANDRIAMANANTENA Fitahiana Lafatra — Junior Java | Full-Stack Developer'
-      : 'RANDRIAMANANTENA Fitahiana Lafatra — Développeur Java junior | Full-Stack';
+      ? 'RANDRIAMANANTENA Fitahiana Lafatra — Junior Full-Stack Developer | Java, Spring Boot, React'
+      : 'RANDRIAMANANTENA Fitahiana Lafatra — Développeur Fullstack Junior | Java, Spring Boot, React';
   const description = english
-    ? 'Professional portfolio of a junior Java and Full-Stack developer: Spring Boot, React and PostgreSQL.'
-    : 'Portfolio professionnel d’un développeur Java junior et Full-Stack : Spring Boot, React et PostgreSQL.';
+    ? 'Professional portfolio of a Master 1 junior Full-Stack developer: Java, Spring Boot, React, PostgreSQL and Python/FastAPI.'
+    : 'Portfolio professionnel d’un développeur Fullstack junior en Master 1 : Java, Spring Boot, React, PostgreSQL et Python/FastAPI.';
   const canonical = `${base}${route}`;
   let html = template.replace(/<html lang="[^"]*">/, `<html lang="${english ? 'en' : 'fr'}">`);
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);

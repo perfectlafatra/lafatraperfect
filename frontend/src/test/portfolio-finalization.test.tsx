@@ -1,4 +1,5 @@
-import { existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
@@ -7,6 +8,7 @@ import '../i18n/config';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { projects } from '../content/projectIndex';
 import { caseStudiesFr } from '../content/caseStudies.fr';
+import { caseStudiesEn } from '../content/caseStudies.en';
 import { siteConfig } from '../config/site';
 import { portraitSequence } from '../config/portraitSequence';
 import { AppRouter } from '../routes/AppRouter';
@@ -28,6 +30,10 @@ function renderPath(path: string) {
   );
 }
 
+function sha256(path: string) {
+  return createHash('sha256').update(readFileSync(path)).digest('hex').toUpperCase();
+}
+
 describe('urgent recruiter portfolio contract', () => {
   it('publishes distinct French and English PDFs for each of the four projects', () => {
     const pdfUrls: string[] = [];
@@ -41,6 +47,45 @@ describe('urgent recruiter portfolio contract', () => {
       pdfUrls.push(project!.resources!.pdf.fr, project!.resources!.pdf.en);
     }
     expect(new Set(pdfUrls).size).toBe(8);
+  });
+
+  it('publishes the authoritative bilingual CV and Mada-BMP documents without changing their URLs', () => {
+    expect(sha256(publicPath(siteConfig.cvUrl.fr))).toBe('FCECFB420556EFB25CDB97B2A2AD949CFE0237EB2A496876E0D8E06F7C9ED5A7');
+    expect(sha256(publicPath(siteConfig.cvUrl.en))).toBe('DC64EE65E3180E5FD91B656E788EBF9E09F4348A42E0EC84EE8424D5A6B3E983');
+
+    const mada = projects.find((entry) => entry.slug === 'mada-bmp')!;
+    expect(sha256(publicPath(mada.resources!.pdf.fr))).toBe('6E22F8803CA252F4D4ACC6D36EAE5750B13440DD558DAC889067B8E482033AF0');
+    expect(sha256(publicPath(mada.resources!.pdf.en))).toBe('806E1DFC0B530B588F6C99F684C906BFF4D07188B381918F1A5A01EC4D6F3AD8');
+  });
+
+  it('uses the requested short header brand while preserving the official identity', () => {
+    renderPath('/fr');
+    const brand = screen.getByRole('link', { name: 'RANDRIAMANANTENA Fitahiana Lafatra' });
+    expect(brand).toHaveTextContent('LF');
+    expect(brand).toHaveTextContent('Lafatra Fitahiana');
+    expect(siteConfig.name).toBe('RANDRIAMANANTENA Fitahiana Lafatra');
+  });
+
+  it('presents Mada-BMP as an ongoing React, Spring Boot and FastAPI target architecture', () => {
+    const mada = projects.find((entry) => entry.slug === 'mada-bmp')!;
+    const contentFr = caseStudiesFr['mada-bmp']!;
+    const contentEn = caseStudiesEn['mada-bmp']!;
+    expect(mada.technologies).toEqual(expect.arrayContaining(['React', 'Spring Boot', 'PostgreSQL', 'Python', 'FastAPI']));
+    expect(contentFr.architecture).toContain('React → Spring Boot → FastAPI');
+    expect(contentEn.architecture).toContain('React → Spring Boot → FastAPI');
+    expect(contentFr.features).toMatch(/prévisions de trésorerie.+tendances budgétaires.+anomalies.+priorisation.+synthèses analytiques/i);
+    expect(contentEn.features).toMatch(/cash-flow forecasts.+budget trends.+anomalies.+prioritisation.+analytical summaries/i);
+    expect(contentFr.publishedScope).toMatch(/en cours|en développement/i);
+    expect(contentEn.publishedScope).toMatch(/in progress|in development/i);
+    expect(`${contentFr.outcomes} ${contentEn.outcomes}`).not.toMatch(/modèle entraîné|trained model|accuracy|production/i);
+  });
+
+  it('exposes the CV-aligned engineering, data and network skill set', () => {
+    renderPath('/fr/competences');
+    expect(screen.getByText(/Python · FastAPI/i)).toBeInTheDocument();
+    expect(screen.getByText(/analyse décisionnelle et prédictive.+science des données.+IA/i)).toBeInTheDocument();
+    expect(screen.getByText(/TCP\/UDP.+WebSocket/i)).toBeInTheDocument();
+    expect(screen.getByText(/tests.+débogage.+sécurité.+intégration/i)).toBeInTheDocument();
   });
 
   it('uses an authentic local ZINA cover and evidence from the signed public study', () => {
@@ -99,7 +144,7 @@ describe('urgent recruiter portfolio contract', () => {
     expect(screen.getAllByText(/RANDRIAMANANTENA Fitahiana Lafatra/i).length).toBeGreaterThanOrEqual(2);
     expect(screen.getByRole('link', { name: 'RANDRIAMANANTENA Fitahiana Lafatra' })).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toHaveTextContent('RANDRIAMANANTENA Fitahiana Lafatra');
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/développeur java|full-stack/i);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Développeur Fullstack Junior — Master 1 M2I | Java, Spring Boot, React');
     expect(screen.getByRole('img', { name: /portrait du développeur en rotation/i })).toBeInTheDocument();
     expect(document.querySelector('.hero-turntable')).toBeInTheDocument();
     expect(document.querySelector('canvas')).not.toBeInTheDocument();

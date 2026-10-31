@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'RANDRIAMANANTENA Fitahiana Lafatra',
   role: {
-    fr: 'Développeur Java junior | Full-Stack',
-    en: 'Junior Java Developer | Full-Stack'
+    fr: 'Développeur Fullstack Junior — Master 1 M2I | Java, Spring Boot, React',
+    en: 'Junior Full-Stack Developer — Master 1 M2I | Java, Spring Boot, React'
   },
   cvUrl: {
     fr: `${import.meta.env.BASE_URL}cv/lafatraramanantena-cv.pdf`,

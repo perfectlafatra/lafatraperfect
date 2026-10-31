@@ -74,23 +74,23 @@ export const caseStudiesFr: Record<string, CaseStudyContent> = {
   },
   'mada-bmp': {
     context:
-      'Les indépendants et petites structures gèrent leurs opérations avec des outils dispersés (tableurs, notes, messageries) qui ne dialoguent pas entre eux.',
+      'Projet académique de Master 1 en cours, Mada-BMP répond aux besoins d’indépendants et de petites structures qui gèrent encore leurs opérations avec des outils dispersés : tableurs, notes et messageries.',
     objectives:
-      'Unifier les flux client, prestation, facture, paiement déclaré et justificatif dans une application métier indépendante du portfolio.',
+      'Unifier les flux client, prestation, facture, paiement déclaré et justificatif, puis fournir une aide à l’analyse sans déplacer les règles métier ni les autorisations hors du backend Java.',
     role:
-      'Concevoir et développer une plateforme de gestion full-stack couvrant le suivi d’activité, les clients et la facturation simple, avec un backend Java et une base PostgreSQL.',
+      'Concevoir et développer l’architecture full-stack, les parcours React, les contrats REST Spring Boot, le modèle PostgreSQL et l’intégration progressive d’un service interne Python/FastAPI pour l’analyse.',
     architecture:
-      'Frontend React, API Spring Boot et PostgreSQL, avec contrats REST, migrations versionnées et séparation claire entre domaines métier.',
+      'Architecture cible en cours d’intégration : React → Spring Boot → FastAPI. React/Vite/TypeScript porte l’interface ; Spring Boot centralise l’API, les autorisations, l’isolation des espaces de travail et les opérations sensibles ; PostgreSQL persiste les données ; FastAPI reste un service interne d’analyse appelé par Spring Boot.',
     features:
-      'Gestion des clients, prestations, factures, paiements déclarés, justificatifs et espaces de travail selon le périmètre actuellement documenté.',
+      'Gestion des clients, prestations, factures, paiements déclarés, justificatifs et espaces de travail. Le périmètre d’aide à la décision vise les prévisions de trésorerie, tendances budgétaires, anomalies, priorisation des relances et synthèses analytiques.',
     implementation:
-      'Architecture React + Spring Boot + PostgreSQL, API REST structurée et validée, migrations versionnées, séparation claire des responsabilités frontend/backend, journal de décisions techniques.',
+      'Les contrats REST et les migrations versionnées structurent les échanges et la persistance. Spring Boot demeure le point de contrôle des permissions, de l’isolation par workspace et des actions sensibles ; le service FastAPI ne reçoit que les données nécessaires aux traitements analytiques prévus.',
     outcomes:
-      'Une plateforme distincte de ce portfolio, en cours de consolidation, avec un socle technique documenté et testable.',
+      'Le projet dispose d’un socle full-stack documenté et testable, distinct de ce portfolio. L’intégration du service d’analyse et la consolidation fonctionnelle restent en cours dans le cadre du Master 1.',
     publishedScope:
-      'Version en développement ; aucune métrique d’usage public n’est affichée à ce stade.',
+      'Projet en développement : l’architecture FastAPI décrit une cible d’intégration. Aucun modèle entraîné, score de précision, résultat prédictif validé, déploiement public ou achèvement complet n’est revendiqué.',
     technicalDecisions:
-      'Architecture modulaire, migrations versionnées, contrats REST validés et documentation des flux client, prestation, facture, paiement et justificatif.'
+      'Conserver Spring Boot comme frontière de sécurité évite d’exposer directement le service d’analyse. Les autorisations, workspaces et opérations sensibles restent contrôlés côté Java, tandis que FastAPI est réservé aux traitements analytiques internes.'
   }
 };
 

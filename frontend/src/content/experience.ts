@@ -3,8 +3,8 @@ export const experience = [
     key: 'mada-bmp',
     title: { fr: 'Développeur Full-Stack — Mada-BMP', en: 'Full-Stack Developer — Mada-BMP' },
     description: {
-      fr: 'Projet académique de Master 1 en cours : plateforme de gestion avec React/Vite/TypeScript, API REST Spring Boot et PostgreSQL.',
-      en: 'Ongoing Master 1 academic project: a management platform using React/Vite/TypeScript, a Spring Boot REST API and PostgreSQL.'
+      fr: 'Projet académique de Master 1 en cours : plateforme de gestion avec React/Vite/TypeScript, API REST Spring Boot, PostgreSQL et service interne d’analyse Python/FastAPI en cours d’intégration.',
+      en: 'Ongoing Master 1 academic project: a management platform using React/Vite/TypeScript, a Spring Boot REST API, PostgreSQL and an internal Python/FastAPI analysis service being integrated.'
     },
     date: { fr: 'Depuis août 2026', en: 'Since August 2026' }
   },
