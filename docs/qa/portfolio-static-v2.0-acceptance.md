@@ -143,3 +143,20 @@ URL publique vérifiée : `https://perfectlafatra.github.io/lafatraperfect/fr/`.
 | Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 48 tests, TypeScript strict, build JS 274,35 kB (gzip 88,00 kB), liens, contrat public et 24 routes + 404 |
 | Publication GitHub Pages | `PASS` | commit `1c6a5d5` ; run `40926656425` terminé avec succès |
 | Recette publique | `PASS` | accueils FR/EN et dix documents PDF répondent en HTTP 200 avec `Content-Type: application/pdf` ; le bundle public contient les cinq nouvelles URL anglaises |
+
+## Synchronisation CV et Mada-BMP FR/EN — 2026-10-31
+
+| contrôle | statut | preuve |
+|---|---|---|
+| Identité d'en-tête | `PASS` | marque courte `LF Lafatra Fitahiana` affichée ; identité légale complète conservée dans le profil et les métadonnées |
+| Positionnement CV | `PASS` | titre junior Full-Stack, Master 1 M2I, Java, Spring Boot et React synchronisés en français et en anglais |
+| Compétences | `PASS` | Java/Web/SQL complétés par Python/FastAPI, analyse décisionnelle et prédictive, TCP/UDP/WebSocket, tests, sécurité et intégration |
+| Mada-BMP | `PASS` | projet Master 1 en cours, architecture cible `React → Spring Boot → FastAPI`, périmètre analytique et limites explicitement distingués |
+| Documents publics | `PASS` | CV FR/EN et étude de cas Mada-BMP FR/EN remplacés aux URL stables ; les quatre SHA-256 publics correspondent aux sources fournies |
+| Contrôle de sécurité | `PASS` | aucune signature de secret détectée dans les sources modifiées ; aucun backend ni dépôt Mada-BMP modifié |
+| Recette frontend complète | `PASS` | `VITE_BASE_PATH=/lafatraperfect/ npm run verify` : lint, 15 fichiers / 52 tests, TypeScript strict, build JS 277,56 kB (gzip 89,03 kB), liens, contrat public et 24 routes + 404 |
+| Commit et push | `PASS` | commit `ae12587` poussé normalement sur `origin/master` |
+| GitHub Actions Pages | `PASS` | run `41191177747`, workflow `Deploy static portfolio to GitHub Pages` terminé avec succès |
+| Recette publique | `PASS` | accueils FR/EN, pages Mada-BMP FR/EN et quatre PDF contrôlés en HTTP 200 ; bundle `assets/index-DqNSAKO9.js` vérifié |
+
+URL publique vérifiée : `https://perfectlafatra.github.io/lafatraperfect/fr/`.
