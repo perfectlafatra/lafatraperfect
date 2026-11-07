@@ -11,7 +11,8 @@ export function Hero({ locale }: { locale: Locale }) {
       <div className="hero__copy">
         <p className="eyebrow">{t('hero.eyebrow')}</p>
         <p className="hero__name">{t('hero.name')}</p>
-        <h1 id="hero-title">{t('hero.title')}</h1>
+        <h1 id="hero-title">{t('hero.roleTitle')}</h1>
+        <p className="hero__education">{t('hero.education')}</p>
         <p className="hero__stack">{t('hero.stack')}</p>
         <p className="hero__lead">{t('hero.lead')}</p>
         <div className="button-row hero__actions">

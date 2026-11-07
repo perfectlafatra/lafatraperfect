@@ -16,8 +16,10 @@
     "name": "RANDRIAMANANTENA Fitahiana Lafatra",
     "eyebrow": "Candidat développeur Java · Web & données · Antananarivo",
     "title": "Développeur Fullstack Junior — Master 1 M2I | Java, Spring Boot, React",
+    "roleTitle": "Développeur Fullstack Junior",
+    "education": "Master 1 Modélisation et Ingénierie Informatique (M2I) · EMIT",
     "stack": "Java · Spring Boot · React · PostgreSQL · Python/FastAPI",
-    "lead": "Étudiant en Master 1 Modélisation et Ingénierie Informatique (M2I) à l’EMIT, je construis des applications web qui relient interfaces React, services Java Spring Boot et données SQL. Ma formation actuelle approfondit l’architecture logicielle, Python, FastAPI et les notions d’analyse décisionnelle et d’IA.",
+    "lead": "Je conçois des applications web qui relient interfaces React, services Java Spring Boot et données SQL. J’approfondis aussi l’architecture logicielle, Python/FastAPI et l’analyse de données.",
     "projects": "Voir mes projets",
     "contact": "Me contacter",
     "mada": "Découvrir Mada-BMP"

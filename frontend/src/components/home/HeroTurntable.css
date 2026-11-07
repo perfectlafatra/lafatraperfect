@@ -24,8 +24,8 @@
 .hero-turntable__base,
 .hero-turntable__overlay {
   display: block;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: cover;
+  object-position: center 28%;
   user-select: none;
   -webkit-user-drag: none;
   border: 0;

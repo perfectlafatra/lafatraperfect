@@ -19,7 +19,10 @@ describe('premium public shell contract', () => {
   it('exposes a labelled hero with a direct contact action', () => {
     renderHome();
 
-    expect(screen.getByRole('region', { name: /développeur fullstack junior.*java.*spring boot.*react/i })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /^développeur fullstack junior$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /^développeur fullstack junior$/i })).toBeInTheDocument();
+    expect(screen.getByText('Master 1 Modélisation et Ingénierie Informatique (M2I) · EMIT')).toHaveClass('hero__education');
+    expect(screen.getByRole('img', { name: /portrait du développeur en rotation/i })).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /me contacter/i })).toHaveLength(2);
     expect(screen.getAllByRole('link', { name: /me contacter/i })[0]).toHaveAttribute('href', '/fr/contact');
   });

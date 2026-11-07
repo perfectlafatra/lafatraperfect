@@ -144,7 +144,8 @@ describe('urgent recruiter portfolio contract', () => {
     expect(screen.getAllByText(/RANDRIAMANANTENA Fitahiana Lafatra/i).length).toBeGreaterThanOrEqual(2);
     expect(screen.getByRole('link', { name: 'RANDRIAMANANTENA Fitahiana Lafatra' })).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toHaveTextContent('RANDRIAMANANTENA Fitahiana Lafatra');
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Développeur Fullstack Junior — Master 1 M2I | Java, Spring Boot, React');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Développeur Fullstack Junior');
+    expect(screen.getByText('Master 1 Modélisation et Ingénierie Informatique (M2I) · EMIT')).toHaveClass('hero__education');
     expect(screen.getByRole('img', { name: /portrait du développeur en rotation/i })).toBeInTheDocument();
     expect(document.querySelector('.hero-turntable')).toBeInTheDocument();
     expect(document.querySelector('canvas')).not.toBeInTheDocument();
