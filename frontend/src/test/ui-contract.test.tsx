@@ -19,6 +19,8 @@ describe('premium public shell contract', () => {
   it('exposes a labelled hero with a direct contact action', () => {
     renderHome();
 
+    expect(screen.getByText('Développeur Java · Web & données · Antananarivo')).toHaveClass('eyebrow');
+    expect(screen.queryByText(/candidat développeur/i)).not.toBeInTheDocument();
     expect(screen.getByRole('region', { name: /^développeur fullstack junior$/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 1, name: /^développeur fullstack junior$/i })).toBeInTheDocument();
     expect(screen.getByText('Master 1 Modélisation et Ingénierie Informatique (M2I) · EMIT')).toHaveClass('hero__education');
